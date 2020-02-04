@@ -1,0 +1,59 @@
+﻿@model Restaurant.WebApplication.Models.Products
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create" method="post" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input asp-for="Id" class="form-control" type="hidden" />
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Description" class="control-label"></label>
+                <input asp-for="Description" class="form-control" />
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Price" class="control-label"></label>
+                <input asp-for="Price" class="form-control" />
+                <span asp-validation-for="Price" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label for="ParentCategoryId" class="control-label"></label>
+                <select id="ParentCategoryId" name="ParentCategoryId" asp-items="ViewBag.ParentCategories" class="form-control">
+                    <option value="0">---Select One---</option>
+                </select>
+                <span asp-validation-for="CategoryId" class="text-danger"></span>
+            </div>
+            <div class="form-group" id="category-container">
+                
+            </div>
+            <div class="form-group">
+                <ul>
+                    <li>
+                        <input type="file" name="formFiles" id="formFiles" class="form-control" multiple accept="image/x-png,image/gif,image/jpeg" />
+                    </li>
+                </ul>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    <script>
+        $(document).on('change', '#ParentCategoryId', function () {
+            $('#category-container').load('/Category/_SubCategoryPartial?parentCategoryId='+$(this).val());
+        })
+    </script>
+}

@@ -1,0 +1,10 @@
+﻿@model SelectList
+<label for="CategoryId" class="control-label"></label>
+<select id="CategoryId" name="CategoryId" class="form-control">
+    <option value="0">---Select category---</option>
+    @foreach (var item in Model)
+    {
+        <option value="@item.Value">@item.Text</option>
+    }
+</select>
+<span for="CategoryId" class="text-danger"></span>

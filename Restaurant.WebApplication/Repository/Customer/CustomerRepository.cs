@@ -51,5 +51,23 @@ namespace Restaurant.WebApplication.Repository.Customer
                 return null;
             }
         }
+        public List<Customers> GetCustomers(bool? isWholesale)
+        {
+            try
+            {
+                var customer = new List<Customers>();
+                if (isWholesale == null)
+                    customer = _applicationDbContext.Customers.ToList();
+                else if ((bool)isWholesale)
+                    customer = _applicationDbContext.Customers.Where(x=>!String.IsNullOrEmpty(x.CompanyName)).ToList();
+                else
+                    customer = _applicationDbContext.Customers.Where(x => String.IsNullOrEmpty(x.CompanyName)).ToList();
+                return customer;
+            }
+            catch
+            {
+                return null;
+            }
+        }
     }
 }

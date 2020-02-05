@@ -26,6 +26,8 @@ namespace Restaurant.WebApplication.Data
         public virtual DbSet<ProductImages> ProductImages { get; set; }
         public virtual DbSet<Products> Products { get; set; }
 
+        public virtual DbSet<BlogImages> BlogImages { get; set; }
+        public virtual DbSet<Blog> Blog { get; set; }
         public virtual DbSet<Careers> Careers { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -38,6 +40,30 @@ namespace Restaurant.WebApplication.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<Blog>(entity =>
+            {
+                entity.Property(e => e.CreateDate).HasColumnType("datetime");
+
+                entity.Property(e => e.Name)
+                    .IsRequired()
+                    .HasMaxLength(200);
+            });
+
+            modelBuilder.Entity<BlogImages>(entity =>
+            {
+                entity.Property(e => e.ImagePath)
+                    .IsRequired()
+                    .HasMaxLength(1000)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.UploadDate).HasColumnType("datetime");
+
+                entity.HasOne(d => d.Blog)
+                    .WithMany(p => p.BlogImages)
+                    .HasForeignKey(d => d.BlogId)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FK_BlogImages_Blog");
+            });
             modelBuilder.Entity<Careers>(entity =>
             {
                 entity.Property(e => e.CreateDate).HasColumnType("datetime");

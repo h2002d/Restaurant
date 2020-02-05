@@ -47,6 +47,7 @@ namespace Restaurant.WebApplication.Controllers
             try
             {
                 var careerNew = careerRepository.Create(career);
+
             }
             catch (Exception ex)
             {

@@ -1,0 +1,53 @@
+﻿@model List<Restaurant.WebApplication.Models.Customers>
+@{
+    ViewData["Title"] = "All";
+}
+<div class="row">
+    <div class="col-sm-12">
+        <form method="get" asp-action="All">
+    <div class="col-sm-2">
+            <input type="text" placeholder="Customer name" id="name" name="name" class="form-control" />
+        </div>
+    <div class="col-sm-2">
+            <input type="text" placeholder="Customer lastname" id="lastname" name="lastname" class="form-control" />
+        </div>
+    <div class="col-sm-2">
+            <input type="text" placeholder="Customer phone" id="phone" name="phone" class="form-control" />
+        </div>
+    <div class="col-sm-2">
+            <input type="text" placeholder="Customer name" id="name" name="name" class="form-control" />
+        </div>
+    <div class="col-sm-2">
+            <input type="text" placeholder="Customer regName" id="regName" name="regName" class="form-control" />
+        </div>
+            <input type="submit" class="btn btn-success" value="Search" />
+        </form>
+    </div>
+</div>
+<table id="listingTable">
+    <tr>
+        <th>UserId</th>
+        <th>Name</th>
+        <th>LastName</th>
+        <th>PhoneNumber</th>
+        <th>CompanyName</th>
+        <th>CompanyAddress</th>
+        <th>CompanyRegNumber</th>
+        <th></th>
+        <th></th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.UserId</td>
+            <td>@item.Name</td>
+            <td>@item.LastName</td>
+            <td>@item.PhoneNumber</td>
+            <td>@item.CompanyName</td>
+            <td>@item.CompanyAddress</td>
+            <td>@item.CompanyRegNumber</td>
+            <td><a href="/Career/Edit/@item.UserId"><span class="glyphicon glyphicon-edit" title="Edit"></span></a></td>
+            <td><a href="/Career/Delete/@item.UserId"><span class="glyphicon glyphicon-trash" style="color:red" title="Delete"></span></a></td>
+        </tr>
+    }
+</table>

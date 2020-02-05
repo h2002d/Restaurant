@@ -46,7 +46,6 @@ C:\Users\davitha\source\repos\Restaurant\Restaurant.WebApplication\bin\Debug\net
 C:\Users\davitha\source\repos\Restaurant\Restaurant.WebApplication\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\Users\davitha\source\repos\Restaurant\Restaurant.WebApplication\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\Users\davitha\source\repos\Restaurant\Restaurant.WebApplication\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-C:\Users\davitha\source\repos\Restaurant\Restaurant.WebApplication\obj\Debug\netcoreapp3.1\Restaurant.WebApplication.csprojAssemblyReference.cache
 C:\Users\davitha\source\repos\Restaurant\Restaurant.WebApplication\obj\Debug\netcoreapp3.1\staticwebassets\Restaurant.WebApplication.StaticWebAssets.Manifest.cache
 C:\Users\davitha\source\repos\Restaurant\Restaurant.WebApplication\obj\Debug\netcoreapp3.1\staticwebassets\Restaurant.WebApplication.StaticWebAssets.xml
 C:\Users\davitha\source\repos\Restaurant\Restaurant.WebApplication\obj\Debug\netcoreapp3.1\Restaurant.WebApplication.RazorAssemblyInfo.cache
@@ -443,3 +442,7 @@ C:\Users\davitha\source\repos\Restaurant\Restaurant.WebApplication\obj\Debug\net
 C:\Users\davitha\source\repos\Restaurant\Restaurant.WebApplication\bin\Debug\netcoreapp3.1\libman.json
 C:\Users\davitha\source\repos\Restaurant\Restaurant.WebApplication\obj\Debug\netcoreapp3.1\Restaurant.WebApplication.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\davitha\source\repos\Restaurant\Restaurant.WebApplication\obj\Debug\netcoreapp3.1\Restaurant.WebApplication.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\davitha\source\repos\Restaurant\Restaurant.WebApplication\obj\Debug\netcoreapp3.1\Restaurant.WebApplication.csprojAssemblyReference.cache
+C:\Users\davitha\source\repos\Restaurant\Restaurant.WebApplication\obj\Debug\netcoreapp3.1\Razor\Views\Blog\Create.cshtml.g.cs
+C:\Users\davitha\source\repos\Restaurant\Restaurant.WebApplication\obj\Debug\netcoreapp3.1\Razor\Views\Customer\All_Retail.cshtml.g.cs
+C:\Users\davitha\source\repos\Restaurant\Restaurant.WebApplication\obj\Debug\netcoreapp3.1\Razor\Views\Customer\All_Wholesale.cshtml.g.cs

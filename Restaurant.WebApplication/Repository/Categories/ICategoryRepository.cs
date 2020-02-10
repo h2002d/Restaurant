@@ -4,9 +4,9 @@ using System.Linq;
 using System.Threading.Tasks;
 using Restaurant.WebApplication.Models;
 
-namespace Restaurant.WebApplication.Repository.Categories
+namespace Restaurant.WebApplication.Repository
 {
-    interface ICategoryRepository
+    public interface ICategoryRepository
     {
         Category Create(Category customer);
         void Delete(Category customer);

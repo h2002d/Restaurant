@@ -10,8 +10,7 @@ using Microsoft.Extensions.Logging;
 using Restaurant.WebApplication.Data;
 using Restaurant.WebApplication.Helpers;
 using Restaurant.WebApplication.Models;
-using Restaurant.WebApplication.Repository.Categories;
-using Restaurant.WebApplication.Repository.Product;
+using Restaurant.WebApplication.Repository;
 
 namespace Restaurant.WebApplication.Controllers
 {
@@ -19,18 +18,18 @@ namespace Restaurant.WebApplication.Controllers
     {
         private readonly ILogger<ProductController> _logger;
         private TestDBContext _dbContext;
-        private ProductRepository productRepository;
+        private IProductRepository _productRepository;
         private IHostingEnvironment _hostingEnvironment;
-        public ProductController(ILogger<ProductController> logger, TestDBContext dbContext, IHostingEnvironment hostingEnvironment)
+        public ProductController(ILogger<ProductController> logger, TestDBContext dbContext, IHostingEnvironment hostingEnvironment, IProductRepository productRepository)
         {
             _logger = logger;
             _dbContext = dbContext;
             _hostingEnvironment = hostingEnvironment;
-            productRepository = new ProductRepository(dbContext);
+            _productRepository = productRepository;
         }
         public IActionResult Index(int Id)
         {
-            var product=productRepository.GetProduct(Id);
+            var product = _productRepository.GetProduct(Id);
             return View(product);
         }
         public IActionResult Create()
@@ -43,10 +42,10 @@ namespace Restaurant.WebApplication.Controllers
         [HttpPost]
         public IActionResult Create(Products product, [FromForm]List<IFormFile> formFiles)
         {
-         
+
             try
             {
-                var productNew = productRepository.Create(product);
+                var productNew = _productRepository.Create(product);
 
                 ProductImagesHelper helper = new ProductImagesHelper(_dbContext, _hostingEnvironment);
                 helper.SaveProductImage(formFiles, productNew.Id);

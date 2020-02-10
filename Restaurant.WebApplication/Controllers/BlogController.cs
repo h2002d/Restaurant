@@ -9,8 +9,7 @@ using Microsoft.Extensions.Logging;
 using Restaurant.WebApplication.Data;
 using Restaurant.WebApplication.Helpers;
 using Restaurant.WebApplication.Models;
-using Restaurant.WebApplication.Repository.Blogs;
-using Restaurant.WebApplication.Repository.Career;
+using Restaurant.WebApplication.Repository;
 
 namespace Restaurant.WebApplication.Controllers
 {
@@ -18,19 +17,19 @@ namespace Restaurant.WebApplication.Controllers
     {
         private readonly ILogger<BlogController> _logger;
         private TestDBContext _dbContext;
-        private BlogRepository blogRepository;
+        private IBlogRepository _blogRepository;
         private IHostingEnvironment _hostingEnvironment;
-        public BlogController(ILogger<BlogController> logger, TestDBContext dbContext, IHostingEnvironment hostingEnvironment)
+        public BlogController(ILogger<BlogController> logger, TestDBContext dbContext, IHostingEnvironment hostingEnvironment, IBlogRepository blogRepository)
         {
             _logger = logger;
             _dbContext = dbContext;
             _hostingEnvironment = hostingEnvironment;
-            blogRepository = new BlogRepository(dbContext);
+            _blogRepository = blogRepository;
         }
 
         public IActionResult Index(int Id)
         {
-            var blog = blogRepository.GetBlog(Id);
+            var blog = _blogRepository.GetBlog(Id);
             return View(blog);
         }
 
@@ -44,7 +43,7 @@ namespace Restaurant.WebApplication.Controllers
         {
             try
             {
-                var blogNew = blogRepository.Create(blog);
+                var blogNew = _blogRepository.Create(blog);
 
                 BlogImagesHelper helper = new BlogImagesHelper(_dbContext, _hostingEnvironment);
                 helper.SaveProductImage(formFiles, blogNew.Id);

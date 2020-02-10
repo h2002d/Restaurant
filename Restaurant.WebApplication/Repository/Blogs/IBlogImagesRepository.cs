@@ -4,9 +4,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Restaurant.WebApplication.Repository.Blogs
+namespace Restaurant.WebApplication.Repository
 {
-    interface IBlogImagesRepository
+    public interface IBlogImagesRepository
     {
         BlogImages Create(BlogImages blogImage);
         void Delete(BlogImages blogImage);

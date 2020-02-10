@@ -4,12 +4,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Restaurant.WebApplication.Repository.Customer
+namespace Restaurant.WebApplication.Repository
 {
-    interface ICustomerRepository
+    public interface ICustomerRepository
     {
         Customers Create(Customers customer);
         void Delete(Customers customer);
         Customers GetCustomer(string customerId);
+        List<Customers> GetCustomers(bool? isWholesale);
     }
 }

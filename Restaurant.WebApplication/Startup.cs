@@ -12,6 +12,7 @@ using Restaurant.WebApplication.Data;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Restaurant.WebApplication.Repository;
 
 namespace Restaurant.WebApplication
 {
@@ -35,6 +36,16 @@ namespace Restaurant.WebApplication
                     Configuration.GetConnectionString("DefaultConnection")));
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
+            services.AddScoped<IBlogRepository, BlogRepository>();
+            services.AddScoped<IBlogImagesRepository, BlogImagesRepository>();
+            services.AddScoped<ICareerRepository, CareerRepository>();
+            services.AddScoped<ICategoryRepository, CategoryRepository>();
+            services.AddScoped<IParentCategoryRepository, ParentCategoryRepository>();
+            services.AddScoped<ICustomerRepository, CustomerRepository>();
+            services.AddScoped<IOrderRepository, OrderRepository>();
+            services.AddScoped<IProductRepository, ProductRepository>();
+            services.AddScoped<IProductImageRepository, ProductImageRepository>();
+
             services.AddMvc().AddRazorRuntimeCompilation();
             services.AddControllersWithViews();
             services.AddRazorPages();

@@ -8,7 +8,7 @@ using Microsoft.Extensions.Logging;
 using Restaurant.WebApplication.Data;
 using Restaurant.WebApplication.Helpers;
 using Restaurant.WebApplication.Models;
-using Restaurant.WebApplication.Repository.Customer;
+using Restaurant.WebApplication.Repository;
 
 namespace Restaurant.WebApplication.Controllers
 {
@@ -16,14 +16,14 @@ namespace Restaurant.WebApplication.Controllers
     {
         private readonly ILogger<CustomerController> _logger;
         private TestDBContext _dbContext;
-        private CustomerRepository customerRepository;
+        private ICustomerRepository _customerRepository;
         private IHostingEnvironment _hostingEnvironment;
-        public CustomerController(ILogger<CustomerController> logger, TestDBContext dbContext, IHostingEnvironment hostingEnvironment)
+        public CustomerController(ILogger<CustomerController> logger, TestDBContext dbContext, IHostingEnvironment hostingEnvironment,ICustomerRepository customerRepository)
         {
             _logger = logger;
             _dbContext = dbContext;
             _hostingEnvironment = hostingEnvironment;
-            customerRepository = new CustomerRepository(dbContext);
+            _customerRepository = customerRepository;
         }
 
         public IActionResult Index()
@@ -37,17 +37,17 @@ namespace Restaurant.WebApplication.Controllers
             string viewName = String.Empty;
             if (User.IsInRole("RS_Wholesale_Operator"))
             {
-                customer = customerRepository.GetCustomers(true);
+                customer = _customerRepository.GetCustomers(true);
                 viewName = "All_Wholesale";
             }
             else if (User.IsInRole("RS_Retail_Operator"))
             {
-                customer = customerRepository.GetCustomers(false);
+                customer = _customerRepository.GetCustomers(false);
                 viewName = "All_Retail";
             }
             else
             {
-                customer = customerRepository.GetCustomers(null);
+                customer = _customerRepository.GetCustomers(null);
                 viewName = "All_Wholesale";
             }
             CustomerHelper.FilterCustomer(ref customer,name,lastname,regName,phonenumber,email);

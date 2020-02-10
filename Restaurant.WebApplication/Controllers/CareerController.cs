@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Restaurant.WebApplication.Data;
 using Restaurant.WebApplication.Models;
-using Restaurant.WebApplication.Repository.Career;
+using Restaurant.WebApplication.Repository;
 
 namespace Restaurant.WebApplication.Controllers
 {
@@ -15,23 +15,23 @@ namespace Restaurant.WebApplication.Controllers
     {
         private readonly ILogger<ProductController> _logger;
         private TestDBContext _dbContext;
-        private CareerRepository careerRepository;
+        private ICareerRepository _careerRepository;
         private IHostingEnvironment _hostingEnvironment;
-        public CareerController(ILogger<ProductController> logger, TestDBContext dbContext, IHostingEnvironment hostingEnvironment)
+        public CareerController(ILogger<ProductController> logger, TestDBContext dbContext, IHostingEnvironment hostingEnvironment, ICareerRepository careerRepository )
         {
             _logger = logger;
             _dbContext = dbContext;
             _hostingEnvironment = hostingEnvironment;
-            careerRepository = new CareerRepository(dbContext);
+            _careerRepository = careerRepository;
         }
         public IActionResult Index(int careerId)
         {
-            var career = careerRepository.GetCareer(careerId);
+            var career = _careerRepository.GetCareer(careerId);
             return View(career);
         }
         public IActionResult All()
         {
-            var career = careerRepository.GetCareers();
+            var career = _careerRepository.GetCareers();
             return View(career);
         }
 
@@ -46,7 +46,7 @@ namespace Restaurant.WebApplication.Controllers
 
             try
             {
-                var careerNew = careerRepository.Create(career);
+                var careerNew = _careerRepository.Create(career);
 
             }
             catch (Exception ex)
@@ -59,15 +59,15 @@ namespace Restaurant.WebApplication.Controllers
 
         public IActionResult Edit(int Id)
         {
-            var career = careerRepository.GetCareer(Id);
+            var career = _careerRepository.GetCareer(Id);
             return View("Create", career);
         }
 
         public IActionResult Delete(int Id)
         {
-            var career = careerRepository.GetCareer(Id);
+            var career = _careerRepository.GetCareer(Id);
             if (career != null)
-                careerRepository.Delete(career);
+                _careerRepository.Delete(career);
 
             return View("Create", career);
         }

@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Http;
 using Restaurant.WebApplication.Data;
 using Restaurant.WebApplication.Models;
-using Restaurant.WebApplication.Repository.Product;
+using Restaurant.WebApplication.Repository;
 using System;
 using System.Collections.Generic;
 using System.IO;

@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Restaurant.WebApplication.Data;
 using Restaurant.WebApplication.Models;
-using Restaurant.WebApplication.Repository.Customer;
+using Restaurant.WebApplication.Repository;
 
 namespace Restaurant.WebApplication.Areas.Identity.Pages.Account.Manage
 {

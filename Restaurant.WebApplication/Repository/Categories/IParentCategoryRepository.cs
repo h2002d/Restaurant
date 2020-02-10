@@ -4,9 +4,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Restaurant.WebApplication.Repository.Categories
+namespace Restaurant.WebApplication.Repository
 {
-    interface IParentCategoryRepository
+    public interface IParentCategoryRepository
     {
         ParentCategory Create(ParentCategory parentCategory);
         void Delete(ParentCategory parentCategory);

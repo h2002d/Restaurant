@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Restaurant.WebApplication.Repository.Customer
+namespace Restaurant.WebApplication.Repository
 {
     public class CustomerRepository : ICustomerRepository
     {

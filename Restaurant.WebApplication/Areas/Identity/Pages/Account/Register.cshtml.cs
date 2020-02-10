@@ -15,7 +15,7 @@ using Microsoft.AspNetCore.WebUtilities;
 using Microsoft.Extensions.Logging;
 using Restaurant.WebApplication.Data;
 using Restaurant.WebApplication.Models;
-using Restaurant.WebApplication.Repository.Customer;
+using Restaurant.WebApplication.Repository;
 
 namespace Restaurant.WebApplication.Areas.Identity.Pages.Account
 {

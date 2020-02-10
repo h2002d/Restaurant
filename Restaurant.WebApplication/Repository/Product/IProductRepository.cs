@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Restaurant.WebApplication.Repository.Product
+namespace Restaurant.WebApplication.Repository
 {
     public interface IProductRepository
     {

@@ -4,13 +4,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Restaurant.WebApplication.Repository.Career
+namespace Restaurant.WebApplication.Repository
 {
-    interface ICareerRepository
+    public interface ICareerRepository
     {
         Careers Create(Careers product);
         void Delete(Careers product);
         Careers GetCareer(int careerId);
+        List<Careers> GetCareers();
     }
 }
 

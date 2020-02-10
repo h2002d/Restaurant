@@ -7,20 +7,20 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.Extensions.Logging;
 using Restaurant.WebApplication.Data;
 using Restaurant.WebApplication.Models;
-using Restaurant.WebApplication.Repository.Categories;
+using Restaurant.WebApplication.Repository;
 
 namespace Restaurant.WebApplication.Controllers
 {
     public class CategoryController : Controller
     {
         private TestDBContext _dbContext;
-        private CategoryRepository categoryRepository;
+        private ICategoryRepository _categoryRepository;
         private readonly ILogger<CategoryController> _logger;
-        public CategoryController(ILogger<CategoryController> logger, TestDBContext dbContext)
+        public CategoryController(ILogger<CategoryController> logger, TestDBContext dbContext,ICategoryRepository categoryRepository)
         {
             _logger = logger;
             _dbContext = dbContext;
-            categoryRepository = new CategoryRepository(dbContext);
+            _categoryRepository = categoryRepository;
         }
         public IActionResult Index()
         {
@@ -37,7 +37,7 @@ namespace Restaurant.WebApplication.Controllers
         [HttpPost]
         public IActionResult Create(Category category)
         {
-            categoryRepository.Create(category);
+            _categoryRepository.Create(category);
             return View();
         }
 

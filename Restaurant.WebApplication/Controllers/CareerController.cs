@@ -8,6 +8,7 @@ using Microsoft.Extensions.Logging;
 using Restaurant.WebApplication.Data;
 using Restaurant.WebApplication.Models;
 using Restaurant.WebApplication.Repository;
+using Restaurant.WebApplication.ViewModels;
 
 namespace Restaurant.WebApplication.Controllers
 {
@@ -17,7 +18,7 @@ namespace Restaurant.WebApplication.Controllers
         private TestDBContext _dbContext;
         private ICareerRepository _careerRepository;
         private IHostingEnvironment _hostingEnvironment;
-        public CareerController(ILogger<ProductController> logger, TestDBContext dbContext, IHostingEnvironment hostingEnvironment, ICareerRepository careerRepository )
+        public CareerController(ILogger<ProductController> logger, TestDBContext dbContext, IHostingEnvironment hostingEnvironment, ICareerRepository careerRepository)
         {
             _logger = logger;
             _dbContext = dbContext;
@@ -26,8 +27,14 @@ namespace Restaurant.WebApplication.Controllers
         }
         public IActionResult Index(int careerId)
         {
-            var career = _careerRepository.GetCareer(careerId);
-            return View(career);
+            //var career = _careerRepository.GetCareer(careerId);
+            //get the carrer if career is nul return the main page
+
+            if (careerId == 0)
+                return View(new CareerMainViewModel());
+            else
+                return View("CareerDetail",new CareerDetailViewModel());
+
         }
         public IActionResult All()
         {

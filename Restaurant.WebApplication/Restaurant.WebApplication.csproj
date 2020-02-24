@@ -20,7 +20,7 @@
 
 
   <ItemGroup>
-    <Folder Include="ViewModels\" />
+    <Folder Include="Services\" />
     <Folder Include="wwwroot\images\products\" />
   </ItemGroup>
 

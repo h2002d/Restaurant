@@ -10,6 +10,7 @@ using Restaurant.WebApplication.Data;
 using Restaurant.WebApplication.Helpers;
 using Restaurant.WebApplication.Models;
 using Restaurant.WebApplication.Repository;
+using Restaurant.WebApplication.ViewModels;
 
 namespace Restaurant.WebApplication.Controllers
 {
@@ -27,10 +28,15 @@ namespace Restaurant.WebApplication.Controllers
             _blogRepository = blogRepository;
         }
 
+
         public IActionResult Index(int Id)
         {
-            var blog = _blogRepository.GetBlog(Id);
-            return View(blog);
+            //var blog = _blogRepository.GetBlog(Id);
+            //return View(blog);
+            if (Id == 0)
+                return View(new BlogMainViewModel());
+            else
+                return View("BlogDetail", new BlogDetailViewModel());
         }
 
         public IActionResult Create()

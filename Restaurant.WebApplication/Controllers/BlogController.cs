@@ -10,6 +10,7 @@ using Restaurant.WebApplication.Data;
 using Restaurant.WebApplication.Helpers;
 using Restaurant.WebApplication.Models;
 using Restaurant.WebApplication.Repository;
+using Restaurant.WebApplication.Services.Blogs;
 using Restaurant.WebApplication.ViewModels;
 
 namespace Restaurant.WebApplication.Controllers
@@ -18,25 +19,35 @@ namespace Restaurant.WebApplication.Controllers
     {
         private readonly ILogger<BlogController> _logger;
         private TestDBContext _dbContext;
-        private IBlogRepository _blogRepository;
+        private IBlogService _blogService;
         private IHostingEnvironment _hostingEnvironment;
-        public BlogController(ILogger<BlogController> logger, TestDBContext dbContext, IHostingEnvironment hostingEnvironment, IBlogRepository blogRepository)
+        public BlogController(ILogger<BlogController> logger, TestDBContext dbContext, IHostingEnvironment hostingEnvironment, IBlogService blogService)
         {
             _logger = logger;
             _dbContext = dbContext;
             _hostingEnvironment = hostingEnvironment;
-            _blogRepository = blogRepository;
+            _blogService = blogService;
+        }
+        public IActionResult All()
+        {
+            var blogs = _blogService.GetBlogs(0);
+            return View(blogs);
         }
 
-
-        public IActionResult Index(int Id)
+        public IActionResult Index(int Id, int page = 1)
         {
-            //var blog = _blogRepository.GetBlog(Id);
-            //return View(blog);
             if (Id == 0)
-                return View(new BlogMainViewModel());
+            {
+                var model = _blogService.GetBlogMainViewModel(page);
+                return View(model);
+            }
             else
-                return View("BlogDetail", new BlogDetailViewModel());
+            {
+                var blog = _blogService.GetBlog(Id);
+                var model = new BlogDetailViewModel();
+                model.Blog = blog;
+                return View("BlogDetail", model);
+            }
         }
 
         public IActionResult Create()
@@ -49,7 +60,7 @@ namespace Restaurant.WebApplication.Controllers
         {
             try
             {
-                var blogNew = _blogRepository.Create(blog);
+                var blogNew = _blogService.Create(blog);
 
                 BlogImagesHelper helper = new BlogImagesHelper(_dbContext, _hostingEnvironment);
                 helper.SaveProductImage(formFiles, blogNew.Id);
@@ -61,7 +72,5 @@ namespace Restaurant.WebApplication.Controllers
             }
             return RedirectToAction("Create");
         }
-
-
     }
 }

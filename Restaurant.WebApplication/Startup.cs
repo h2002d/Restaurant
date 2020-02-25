@@ -13,6 +13,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Restaurant.WebApplication.Repository;
+using Restaurant.WebApplication.Services.Blogs;
 
 namespace Restaurant.WebApplication
 {
@@ -30,7 +31,7 @@ namespace Restaurant.WebApplication
         {
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(
-                    Configuration.GetConnectionString("DefaultConnection"))); 
+                    Configuration.GetConnectionString("DefaultConnection")));
             services.AddDbContext<TestDBContext>(options =>
                 options.UseSqlServer(
                     Configuration.GetConnectionString("DefaultConnection")));
@@ -45,6 +46,9 @@ namespace Restaurant.WebApplication
             services.AddScoped<IOrderRepository, OrderRepository>();
             services.AddScoped<IProductRepository, ProductRepository>();
             services.AddScoped<IProductImageRepository, ProductImageRepository>();
+
+
+            services.AddScoped<IBlogService, BlogService>();
 
             services.AddMvc().AddRazorRuntimeCompilation();
             services.AddControllersWithViews();

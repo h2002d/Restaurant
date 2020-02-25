@@ -1,9 +1,10 @@
-﻿using System;
+﻿using Restaurant.WebApplication.ViewModels;
+using System;
 using System.Collections.Generic;
 
 namespace Restaurant.WebApplication.Models
 {
-    public partial class Category
+    public partial class Category : ViewModelBase
     {
         public Category()
         {

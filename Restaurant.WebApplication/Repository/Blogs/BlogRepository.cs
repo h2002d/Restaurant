@@ -47,5 +47,23 @@ namespace Restaurant.WebApplication.Repository
 
             return blog;
         }
+        public List<Blog> GetBlogs(int page)
+        {
+
+            var blogs = _applicationDbContext.Blog.ToList();
+            if (page != 0)
+                blogs = _applicationDbContext.Blog.Skip((page - 1) * 10).Take(10).ToList(); 
+            foreach (var blog in blogs)
+            {
+                _applicationDbContext.Entry(blog).Collection(p => p.BlogImages).Load();
+                //_applicationDbContext.Entry(blog).State = EntityState.Detached;
+            }
+            return blogs.ToList();
+        }
+
+        public int GetBlogsCount()
+        {
+            return _applicationDbContext.Blog.Count();
+        }
     }
 }

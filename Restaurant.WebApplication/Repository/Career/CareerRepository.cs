@@ -52,7 +52,7 @@ namespace Restaurant.WebApplication.Repository
             }
             catch
             {
-                return null;
+                return new List<Careers>();
             }
         }
     }

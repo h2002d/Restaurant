@@ -1,16 +1,13 @@
-﻿using Restaurant.WebApplication.ViewModels;
+﻿using Restaurant.WebApplication.Models;
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
-namespace Restaurant.WebApplication.Models
+namespace Restaurant.WebApplication.ViewModels
 {
-    public partial class Blog
+    public class BlogViewModel : ViewModelBase
     {
-        public Blog()
-        {
-            BlogImages = new HashSet<BlogImages>();
-        }
-
         public int Id { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }

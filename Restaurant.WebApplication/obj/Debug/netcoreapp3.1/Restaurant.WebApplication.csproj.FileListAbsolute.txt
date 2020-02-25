@@ -440,8 +440,6 @@ C:\Users\davitha\source\repos\Restaurant\Restaurant.WebApplication\obj\Debug\net
 C:\Users\davitha\source\repos\Restaurant\Restaurant.WebApplication\obj\Debug\netcoreapp3.1\Razor\Views\Career\All.cshtml.g.cs
 C:\Users\davitha\source\repos\Restaurant\Restaurant.WebApplication\obj\Debug\netcoreapp3.1\Razor\Views\Career\Create.cshtml.g.cs
 C:\Users\davitha\source\repos\Restaurant\Restaurant.WebApplication\bin\Debug\netcoreapp3.1\libman.json
-C:\Users\davitha\source\repos\Restaurant\Restaurant.WebApplication\obj\Debug\netcoreapp3.1\Restaurant.WebApplication.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\davitha\source\repos\Restaurant\Restaurant.WebApplication\obj\Debug\netcoreapp3.1\Restaurant.WebApplication.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\davitha\source\repos\Restaurant\Restaurant.WebApplication\obj\Debug\netcoreapp3.1\Razor\Views\Blog\Create.cshtml.g.cs
 C:\Users\davitha\source\repos\Restaurant\Restaurant.WebApplication\obj\Debug\netcoreapp3.1\Razor\Views\Customer\All_Retail.cshtml.g.cs
 C:\Users\davitha\source\repos\Restaurant\Restaurant.WebApplication\obj\Debug\netcoreapp3.1\Razor\Views\Customer\All_Wholesale.cshtml.g.cs
@@ -899,3 +897,14 @@ C:\Projects\Restaurant\Restaurant.WebApplication\obj\Debug\netcoreapp3.1\Razor\V
 C:\Projects\Restaurant\Restaurant.WebApplication\obj\Debug\netcoreapp3.1\Razor\Views\Career\CareerDetail.cshtml.g.cs
 C:\Projects\Restaurant\Restaurant.WebApplication\obj\Debug\netcoreapp3.1\Razor\Views\Home\Contact.cshtml.g.cs
 C:\Projects\Restaurant\Restaurant.WebApplication\obj\Debug\netcoreapp3.1\Razor\Views\Home\About.cshtml.g.cs
+C:\Users\davitha\source\repos\Restaurant\Restaurant.WebApplication\obj\Debug\netcoreapp3.1\Restaurant.WebApplication.csprojAssemblyReference.cache
+C:\Users\davitha\source\repos\Restaurant\Restaurant.WebApplication\obj\Debug\netcoreapp3.1\Razor\Views\Blog\BlogDetail.cshtml.g.cs
+C:\Users\davitha\source\repos\Restaurant\Restaurant.WebApplication\obj\Debug\netcoreapp3.1\Razor\Views\Blog\Index.cshtml.g.cs
+C:\Users\davitha\source\repos\Restaurant\Restaurant.WebApplication\obj\Debug\netcoreapp3.1\Razor\Views\Career\CareerDetail.cshtml.g.cs
+C:\Users\davitha\source\repos\Restaurant\Restaurant.WebApplication\obj\Debug\netcoreapp3.1\Razor\Views\Career\Index.cshtml.g.cs
+C:\Users\davitha\source\repos\Restaurant\Restaurant.WebApplication\obj\Debug\netcoreapp3.1\Razor\Views\Home\About.cshtml.g.cs
+C:\Users\davitha\source\repos\Restaurant\Restaurant.WebApplication\obj\Debug\netcoreapp3.1\Razor\Views\Home\Contact.cshtml.g.cs
+C:\Users\davitha\source\repos\Restaurant\Restaurant.WebApplication\obj\Debug\netcoreapp3.1\Razor\Views\Blog\All.cshtml.g.cs
+C:\Users\davitha\source\repos\Restaurant\Restaurant.WebApplication\bin\Debug\netcoreapp3.1\AutoMapper.dll
+C:\Users\davitha\source\repos\Restaurant\Restaurant.WebApplication\obj\Debug\netcoreapp3.1\Restaurant.WebApplication.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\davitha\source\repos\Restaurant\Restaurant.WebApplication\obj\Debug\netcoreapp3.1\Restaurant.WebApplication.MvcApplicationPartsAssemblyInfo.cache

@@ -10,6 +10,8 @@ namespace Restaurant.WebApplication.Repository
     {
         Blog Create(Blog product);
         void Delete(Blog product);
-        Blog GetBlog(int careerId);
+        Blog GetBlog(int productId);
+        List<Blog> GetBlogs(int page);
+        int GetBlogsCount();
     }
 }

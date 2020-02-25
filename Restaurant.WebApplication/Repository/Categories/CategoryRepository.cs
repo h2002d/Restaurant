@@ -39,6 +39,7 @@ namespace Restaurant.WebApplication.Repository
         public Category GetCategory(int categoryId)
         {
             var category = _applicationDbContext.Category.Find(categoryId);
+            _applicationDbContext.Entry(category).State = EntityState.Detached;
             return category;
         }
         public List<Category> GetCategories()

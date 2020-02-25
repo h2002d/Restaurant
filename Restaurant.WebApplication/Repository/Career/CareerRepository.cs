@@ -18,13 +18,9 @@ namespace Restaurant.WebApplication.Repository
         public Careers Create(Careers career)
         {
             career.CreateDate = DateTime.Now;
-            var localCareer = GetCareer(career.Id);
-
-            if (localCareer != null)
-            {
-                _applicationDbContext.Entry(localCareer).State = EntityState.Detached;
+           
+            if (career.Id != 0)
                 _applicationDbContext.Careers.Update(career);
-            }
             else
                 _applicationDbContext.Careers.Add(career);
             _applicationDbContext.SaveChanges();

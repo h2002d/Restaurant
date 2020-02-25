@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AutoMapper;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -18,12 +19,14 @@ namespace Restaurant.WebApplication.Controllers
         private TestDBContext _dbContext;
         private ICareerRepository _careerRepository;
         private IHostingEnvironment _hostingEnvironment;
-        public CareerController(ILogger<ProductController> logger, TestDBContext dbContext, IHostingEnvironment hostingEnvironment, ICareerRepository careerRepository)
+        private readonly IMapper _mapper;
+        public CareerController(ILogger<ProductController> logger, TestDBContext dbContext, IMapper mapper, IHostingEnvironment hostingEnvironment, ICareerRepository careerRepository)
         {
             _logger = logger;
             _dbContext = dbContext;
             _hostingEnvironment = hostingEnvironment;
             _careerRepository = careerRepository;
+            _mapper = mapper;
         }
         public IActionResult Index(int careerId)
         {
@@ -49,7 +52,9 @@ namespace Restaurant.WebApplication.Controllers
         public IActionResult All()
         {
             var career = _careerRepository.GetCareers();
-            return View(career);
+            var model = new CareerMainViewModel();
+            model.Careers = career;
+            return View(model);
         }
 
         public IActionResult Create()
@@ -77,7 +82,7 @@ namespace Restaurant.WebApplication.Controllers
         public IActionResult Edit(int Id)
         {
             var career = _careerRepository.GetCareer(Id);
-            return View("Create", career);
+            return View("Create", _mapper.Map<CareerViewModel>(career));
         }
 
         public IActionResult Delete(int Id)

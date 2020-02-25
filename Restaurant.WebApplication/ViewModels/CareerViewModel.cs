@@ -1,10 +1,11 @@
-﻿using Restaurant.WebApplication.ViewModels;
-using System;
+﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
-namespace Restaurant.WebApplication.Models
+namespace Restaurant.WebApplication.ViewModels
 {
-    public partial class Careers 
+    public class CareerViewModel : ViewModelBase
     {
         public int Id { get; set; }
         public string Name { get; set; }

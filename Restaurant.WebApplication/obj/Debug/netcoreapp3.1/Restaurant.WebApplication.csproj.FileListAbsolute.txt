@@ -839,7 +839,6 @@ C:\Projects\Restaurant\Restaurant.WebApplication\bin\Debug\netcoreapp3.1\runtime
 C:\Projects\Restaurant\Restaurant.WebApplication\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\Projects\Restaurant\Restaurant.WebApplication\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\Projects\Restaurant\Restaurant.WebApplication\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-C:\Projects\Restaurant\Restaurant.WebApplication\obj\Debug\netcoreapp3.1\Restaurant.WebApplication.csprojAssemblyReference.cache
 C:\Projects\Restaurant\Restaurant.WebApplication\obj\Debug\netcoreapp3.1\staticwebassets\Restaurant.WebApplication.StaticWebAssets.Manifest.cache
 C:\Projects\Restaurant\Restaurant.WebApplication\obj\Debug\netcoreapp3.1\staticwebassets\Restaurant.WebApplication.StaticWebAssets.xml
 C:\Projects\Restaurant\Restaurant.WebApplication\obj\Debug\netcoreapp3.1\Restaurant.WebApplication.MvcApplicationPartsAssemblyInfo.cs
@@ -911,3 +910,8 @@ C:\Users\davitha\source\repos\Restaurant\Restaurant.WebApplication\obj\Debug\net
 C:\Users\davitha\source\repos\Restaurant\Restaurant.WebApplication\obj\Debug\netcoreapp3.1\Restaurant.WebApplication.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\davitha\source\repos\Restaurant\Restaurant.WebApplication\obj\Debug\netcoreapp3.1\Razor\Views\Designer\SlidersAll.cshtml.g.cs
 C:\Users\davitha\source\repos\Restaurant\Restaurant.WebApplication\obj\Debug\netcoreapp3.1\Razor\Views\Designer\CreateSlider.cshtml.g.cs
+C:\Projects\Restaurant\Restaurant.WebApplication\bin\Debug\netcoreapp3.1\AutoMapper.dll
+C:\Projects\Restaurant\Restaurant.WebApplication\bin\Debug\netcoreapp3.1\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Projects\Restaurant\Restaurant.WebApplication\obj\Debug\netcoreapp3.1\Razor\Views\Blog\All.cshtml.g.cs
+C:\Projects\Restaurant\Restaurant.WebApplication\obj\Debug\netcoreapp3.1\Razor\Views\Designer\CreateSlider.cshtml.g.cs
+C:\Projects\Restaurant\Restaurant.WebApplication\obj\Debug\netcoreapp3.1\Razor\Views\Designer\SlidersAll.cshtml.g.cs

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AutoMapper;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -18,22 +19,26 @@ namespace Restaurant.WebApplication.Controllers
     public class BlogController : Controller
     {
         private readonly ILogger<BlogController> _logger;
-        private TestDBContext _dbContext;
-        private IBlogService _blogService;
-        private IHostingEnvironment _hostingEnvironment;
-        public BlogController(ILogger<BlogController> logger, TestDBContext dbContext, IHostingEnvironment hostingEnvironment, IBlogService blogService)
+        private readonly TestDBContext _dbContext;
+        private readonly IBlogService _blogService;
+        private readonly IHostingEnvironment _hostingEnvironment;
+        private readonly IMapper _mapper;
+        public BlogController(ILogger<BlogController> logger, TestDBContext dbContext, IHostingEnvironment hostingEnvironment, IBlogService blogService,IMapper mapper)
         {
             _logger = logger;
             _dbContext = dbContext;
             _hostingEnvironment = hostingEnvironment;
             _blogService = blogService;
+            _mapper = mapper;
         }
+
         public IActionResult All()
         {
             var blogs = _blogService.GetBlogs(0);
-            return View(blogs);
+            var model = new BlogMainViewModel();
+            model.Blogs = blogs;
+            return View(model);
         }
-
         public IActionResult Index(int Id, int page = 1)
         {
             if (Id == 0)
@@ -49,12 +54,11 @@ namespace Restaurant.WebApplication.Controllers
                 return View("BlogDetail", model);
             }
         }
-
-        public IActionResult Create()
+        public IActionResult Create(int Id)
         {
-            return View();
+            var blog = _blogService.GetBlog(Id);
+            return View(_mapper.Map<BlogViewModel>(blog));
         }
-
         [HttpPost]
         public IActionResult Create(Blog blog, [FromForm]List<IFormFile> formFiles)
         {

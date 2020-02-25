@@ -50,6 +50,7 @@ namespace Restaurant.WebApplication
 
 
             services.AddScoped<IBlogService, BlogService>();
+            services.AddScoped<IBlogImagesService, BlogImageService>();
 
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
             services.AddMvc().AddRazorRuntimeCompilation();
@@ -83,7 +84,7 @@ namespace Restaurant.WebApplication
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                    pattern: "{controller=Home}/{action=Index}/{Id?}");
                 endpoints.MapRazorPages();
             });
         }

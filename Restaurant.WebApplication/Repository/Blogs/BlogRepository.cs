@@ -19,15 +19,12 @@ namespace Restaurant.WebApplication.Repository
         public Blog Create(Blog blog)
         {
             blog.CreateDate = DateTime.Now;
-            var localCareer = GetBlog(blog.Id);
 
-            if (localCareer != null)
-            {
-                _applicationDbContext.Entry(localCareer).State = EntityState.Detached;
+            if (blog.Id != 0)
                 _applicationDbContext.Blog.Update(blog);
-            }
             else
                 _applicationDbContext.Blog.Add(blog);
+
             _applicationDbContext.SaveChanges();
             return blog;
         }
@@ -52,7 +49,7 @@ namespace Restaurant.WebApplication.Repository
 
             var blogs = _applicationDbContext.Blog.ToList();
             if (page != 0)
-                blogs = _applicationDbContext.Blog.Skip((page - 1) * 10).Take(10).ToList(); 
+                blogs = _applicationDbContext.Blog.Skip((page - 1) * 10).Take(10).ToList();
             foreach (var blog in blogs)
             {
                 _applicationDbContext.Entry(blog).Collection(p => p.BlogImages).Load();

@@ -909,3 +909,5 @@ C:\Users\davitha\source\repos\Restaurant\Restaurant.WebApplication\bin\Debug\net
 C:\Users\davitha\source\repos\Restaurant\Restaurant.WebApplication\bin\Debug\netcoreapp3.1\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 C:\Users\davitha\source\repos\Restaurant\Restaurant.WebApplication\obj\Debug\netcoreapp3.1\Restaurant.WebApplication.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\davitha\source\repos\Restaurant\Restaurant.WebApplication\obj\Debug\netcoreapp3.1\Restaurant.WebApplication.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\davitha\source\repos\Restaurant\Restaurant.WebApplication\obj\Debug\netcoreapp3.1\Razor\Views\Designer\SlidersAll.cshtml.g.cs
+C:\Users\davitha\source\repos\Restaurant\Restaurant.WebApplication\obj\Debug\netcoreapp3.1\Razor\Views\Designer\CreateSlider.cshtml.g.cs

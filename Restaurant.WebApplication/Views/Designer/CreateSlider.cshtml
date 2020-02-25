@@ -1,0 +1,73 @@
+﻿@model Restaurant.WebApplication.ViewModels.SliderViewModel
+
+@{
+    ViewData["Title"] = "CreateSlider";
+}
+
+<h2>CreateSlider</h2>
+
+<h4>Slider</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="CreateSlider" method="post"  enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <input type="hidden" asp-for="Id" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Description" class="control-label"></label>
+                <input asp-for="Description" class="form-control" />
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SliderImagePath" class="control-label"></label>
+                <input asp-for="SliderImagePath" class="form-control" />
+                <span asp-validation-for="SliderImagePath" class="text-danger"></span>
+                @if (Model != null)
+                {
+                    <img src="@Model.SliderImagePath" style="width:250px;height:250px;" />
+                }
+                <input asp-for="SliderImageFile" class="form-control" multiple accept="image/x-png,image/gif,image/jpeg" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Background1Path" class="control-label"></label>
+                <input asp-for="Background1Path" class="form-control" />
+                <span asp-validation-for="Background1Path" class="text-danger"></span>
+                @if (Model != null)
+                {
+                    <img src="@Model.Background1Path" style="width:250px;height:250px;" />
+                }
+                <input asp-for="Background1File" class="form-control" multiple accept="image/x-png,image/gif,image/jpeg" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Background2Path" class="control-label"></label>
+                <input asp-for="Background2Path" class="form-control" />
+                <span asp-validation-for="Background2Path" class="text-danger"></span>
+                @if (Model != null)
+                {
+                    <img src="@Model.Background2Path" style="width:250px;height:250px;" />
+                }
+                <input asp-for="Background2File" class="form-control" multiple accept="image/x-png,image/gif,image/jpeg" />
+            </div>
+            <div class="form-group">
+                <label asp-for="ShopNowURL" class="control-label"></label>
+                <input asp-for="ShopNowURL" class="form-control" />
+                <span asp-validation-for="ShopNowURL" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

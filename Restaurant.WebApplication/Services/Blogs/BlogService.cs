@@ -24,7 +24,6 @@ namespace Restaurant.WebApplication.Services.Blogs
 
         public BlogMainViewModel GetBlogMainViewModel(int page)
         {
-
             var blogs = _blogRepository.GetBlogs(page);
             var model = new BlogMainViewModel();
             model.Blogs = blogs;

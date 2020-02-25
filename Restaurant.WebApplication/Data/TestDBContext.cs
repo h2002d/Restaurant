@@ -18,6 +18,7 @@ namespace Restaurant.WebApplication.Data
 
         public virtual DbSet<Category> Category { get; set; }
         public virtual DbSet<Customers> Customers { get; set; }
+        public virtual DbSet<Slider> Sliders { get; set; }
         public virtual DbSet<OrderProduct> OrderProduct { get; set; }
         public virtual DbSet<OrderStatus> OrderStatus { get; set; }
         public virtual DbSet<Orders> Orders { get; set; }

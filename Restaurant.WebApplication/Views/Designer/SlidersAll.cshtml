@@ -1,0 +1,24 @@
+﻿@model Restaurant.WebApplication.ViewModels.SliderMainViewModel
+@{
+    ViewData["Title"] = "Blogs";
+}
+@*admin role must see this section another section need to be designed*@
+<table id="listingTable">
+    <tr>
+        <th>Title</th>
+        <th>Description</th>
+        <th>Created on</th>
+        <th></th>
+        <th></th>
+    </tr>
+    @foreach (var item in Model.Sliders)
+    {
+        <tr>
+            <td>@item.Name</td>
+            <td>@item.Description</td>
+            <td><a href="/Designer/CreateSlider?id=@item.Id"><span class="glyphicon glyphicon-edit" title="Edit"></span></a></td>
+            <td><a href="/Designer/DeleteSlider?id=@item.Id"><span class="glyphicon glyphicon-trash" style="color:red" title="Delete"></span></a></td>
+        </tr>
+    }
+</table>
+@*admin role section end*@

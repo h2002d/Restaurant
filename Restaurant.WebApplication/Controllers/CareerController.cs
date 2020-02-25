@@ -27,13 +27,23 @@ namespace Restaurant.WebApplication.Controllers
         }
         public IActionResult Index(int careerId)
         {
-            //var career = _careerRepository.GetCareer(careerId);
+            //
             //get the carrer if career is nul return the main page
 
             if (careerId == 0)
-                return View(new CareerMainViewModel());
+            {
+                var career = _careerRepository.GetCareers();
+                var model = new CareerMainViewModel();
+                model.Careers = career;
+                return View(model);
+            }
             else
-                return View("CareerDetail",new CareerDetailViewModel());
+            {
+                var career = _careerRepository.GetCareer(careerId);
+                var model = new CareerDetailViewModel();
+                model.Career = career;
+                return View("CareerDetail", model);
+            }
 
         }
         public IActionResult All()

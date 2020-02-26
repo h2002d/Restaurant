@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Restaurant.WebApplication.Services.Designer
+namespace Restaurant.WebApplication.Services.Designers
 {
     public class SliderService : ISliderService
     {

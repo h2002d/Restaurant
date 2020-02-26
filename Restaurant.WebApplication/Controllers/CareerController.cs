@@ -65,7 +65,6 @@ namespace Restaurant.WebApplication.Controllers
         [HttpPost]
         public IActionResult Create(Careers career)
         {
-
             try
             {
                 var careerNew = _careerRepository.Create(career);

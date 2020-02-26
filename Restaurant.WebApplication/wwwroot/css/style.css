@@ -4269,6 +4269,13 @@ header.coffee-2 .navigation-filter .website-search .filter-search .categories-se
 /************************************
 	Footer
 *************************************/
+footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    overflow: hidden;
+}
 footer .footer-logo {
   margin-bottom: 20px; }
 
@@ -7175,3 +7182,17 @@ footer.coffee .newletter {
 @media (min-width: 576px) and (max-width: 767px) {
   .error-404 .normal-btn {
     margin-bottom: 60px; } }
+body {
+    margin: 0 0 450px!important;
+    /* bottom = footer height */
+}
+
+.designer-item{
+    border:1px solid #88c74a;
+    padding:10px;
+    color:#252525;
+}
+.designer-item:hover{
+    border: 2px solid #88c74a;
+    text-decoration:none;
+}

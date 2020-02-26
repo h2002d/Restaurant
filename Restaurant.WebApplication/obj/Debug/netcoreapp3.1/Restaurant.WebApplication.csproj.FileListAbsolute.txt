@@ -915,3 +915,5 @@ C:\Projects\Restaurant\Restaurant.WebApplication\bin\Debug\netcoreapp3.1\AutoMap
 C:\Projects\Restaurant\Restaurant.WebApplication\obj\Debug\netcoreapp3.1\Razor\Views\Blog\All.cshtml.g.cs
 C:\Projects\Restaurant\Restaurant.WebApplication\obj\Debug\netcoreapp3.1\Razor\Views\Designer\CreateSlider.cshtml.g.cs
 C:\Projects\Restaurant\Restaurant.WebApplication\obj\Debug\netcoreapp3.1\Razor\Views\Designer\SlidersAll.cshtml.g.cs
+C:\Users\davitha\source\repos\Restaurant\Restaurant.WebApplication\obj\Debug\netcoreapp3.1\Razor\Views\Designer\Main.cshtml.g.cs
+C:\Users\davitha\source\repos\Restaurant\Restaurant.WebApplication\obj\Debug\netcoreapp3.1\Razor\Views\Designer\Index.cshtml.g.cs

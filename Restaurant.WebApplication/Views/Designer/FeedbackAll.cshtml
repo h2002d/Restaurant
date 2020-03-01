@@ -1,0 +1,21 @@
+﻿@model Restaurant.WebApplication.ViewModels.FeedbackMainViewModel
+@{
+    ViewData["Title"] = "Feedbacks";
+}
+@*admin role must see this section another section need to be designed*@
+<table id="listingTable">
+    <tr>
+        <th>Author</th>
+        <th><a href="/Designer/FeedbackCreate"><span class="glyphicon glyphicon-plus" title="Add"></span></a></th>
+        <th></th>
+    </tr>
+    @foreach (var item in Model.Feedbacks)
+    {
+        <tr>
+            <td>@item.Author</td>
+            <td><a href="/Designer/FeedbackCreate?Id=@item.Id"><span class="glyphicon glyphicon-edit" title="Edit"></span></a></td>
+            <td><a href="/Designer/FeedbackDelete/@item.Id"><span class="glyphicon glyphicon-trash" style="color:red" title="Delete"></span></a></td>
+        </tr>
+    }
+</table>
+@*admin role section end*@

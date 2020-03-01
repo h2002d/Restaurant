@@ -46,7 +46,7 @@ namespace Restaurant.WebApplication.Controllers
         }
 
         public IActionResult Index(int Id, int page = 1)
-        {
+       {
             if (Id == 0)
             {
                 var model = _blogService.GetBlogMainViewModel(page);
@@ -66,6 +66,11 @@ namespace Restaurant.WebApplication.Controllers
             var blog = _blogService.GetBlog(Id);
             return View(_mapper.Map<BlogViewModel>(blog));
         }
+        public IActionResult Delete(int Id)
+        {
+            _blogService.Delete(Id);
+            return RedirectToAction("All");
+        }
 
         [HttpPost]
         public IActionResult Create(Blog blog, [FromForm]List<IFormFile> formFiles)
@@ -80,7 +85,7 @@ namespace Restaurant.WebApplication.Controllers
             catch (Exception ex)
             {
                 ModelState.AddModelError("", ex.Message);
-                return View(blog);
+                return View(_mapper.Map<BlogViewModel>(blog));
             }
             return RedirectToAction("Create", new { id = blog.Id });
         }

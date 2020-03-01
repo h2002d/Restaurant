@@ -13,5 +13,6 @@ namespace Restaurant.WebApplication.Services.Blogs
         Blog GetBlog(int Id);
         Blog Create(Blog blog);
         List<Blog> GetBlogs(int page);
+        void Delete(int id);
     }
 }

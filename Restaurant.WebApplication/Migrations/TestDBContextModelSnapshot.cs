@@ -101,6 +101,9 @@ namespace Restaurant.WebApplication.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<int?>("CategoryId")
+                        .HasColumnType("int");
+
                     b.Property<string>("Description")
                         .HasColumnType("nvarchar(500)")
                         .HasMaxLength(500);
@@ -114,6 +117,8 @@ namespace Restaurant.WebApplication.Migrations
                         .HasColumnType("int");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("CategoryId");
 
                     b.HasIndex("ParentId");
 
@@ -159,6 +164,24 @@ namespace Restaurant.WebApplication.Migrations
                     b.HasKey("UserId");
 
                     b.ToTable("Customers");
+                });
+
+            modelBuilder.Entity("Restaurant.WebApplication.Models.Designer", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("AboutUsContent")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ContactUsContent")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Designer");
                 });
 
             modelBuilder.Entity("Restaurant.WebApplication.Models.OrderProduct", b =>
@@ -354,6 +377,36 @@ namespace Restaurant.WebApplication.Migrations
                     b.ToTable("Products");
                 });
 
+            modelBuilder.Entity("Restaurant.WebApplication.Models.Slider", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Background1Path")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Background2Path")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Description")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ShopNowURL")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("SliderImagePath")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Sliders");
+                });
+
             modelBuilder.Entity("Restaurant.WebApplication.Models.BlogImages", b =>
                 {
                     b.HasOne("Restaurant.WebApplication.Models.Blog", "Blog")
@@ -365,6 +418,10 @@ namespace Restaurant.WebApplication.Migrations
 
             modelBuilder.Entity("Restaurant.WebApplication.Models.Category", b =>
                 {
+                    b.HasOne("Restaurant.WebApplication.Models.Category", null)
+                        .WithMany("Categories")
+                        .HasForeignKey("CategoryId");
+
                     b.HasOne("Restaurant.WebApplication.Models.ParentCategory", "Parent")
                         .WithMany("Category")
                         .HasForeignKey("ParentId")

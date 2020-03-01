@@ -31,7 +31,7 @@ namespace Restaurant.WebApplication.Controllers
         public IActionResult Index(int careerId)
         {
             //
-            //get the carrer if career is nul return the main page
+            //get the carrer if career is null return the main page
 
             if (careerId == 0)
             {
@@ -73,9 +73,9 @@ namespace Restaurant.WebApplication.Controllers
             catch (Exception ex)
             {
                 ModelState.AddModelError("", ex.Message);
-                return View(career);
+                return RedirectToAction("Edit", new { id = career.Id });
             }
-            return RedirectToAction("Create");
+            return RedirectToAction("All");
         }
 
         public IActionResult Edit(int Id)
@@ -90,7 +90,7 @@ namespace Restaurant.WebApplication.Controllers
             if (career != null)
                 _careerRepository.Delete(career);
 
-            return View("Create", career);
+            return RedirectToAction("All");
         }
     }
 }

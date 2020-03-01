@@ -1,37 +1,42 @@
 ﻿@model Restaurant.WebApplication.ViewModels.CareerViewModel
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "КАРЬЕРА";
 }
 
-<h2>Create</h2>
-
-<h4>Careers</h4>
+<h4>КАРЬЕРА</h4>
 <hr />
 <div class="row">
-    <div class="col-md-4">
+    <div class="col-md-12">
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="Id" class="form-control" />
 
-            <div class="form-group">
+            <div class="form-group col-md-4">
                 <label asp-for="Name" class="control-label"></label>
                 <input asp-for="Name" class="form-control" />
                 <span asp-validation-for="Name" class="text-danger"></span>
             </div>
-            <div class="form-group">
+            <div class="form-group col-md-12">
                 <label asp-for="Description" class="control-label"></label>
-                <input asp-for="Description" class="form-control" />
+                <textarea asp-for="Description" style="margin-top: 30px;" placeholder="Type some text">
+                </textarea>
                 <span asp-validation-for="Description" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-default" />
+            <div class="form-group col-md-12">
+                <input type="submit" value="Сохранить" onclick="$('form').submit()" class="btn btn-default btn-success" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="All">Назад</a>
 </div>
-
+@section Scripts{ 
+    <script>
+        $(document).ready(function () {
+            $('#Description').summernote();
+        });
+    </script>
+}

@@ -1,0 +1,128 @@
+﻿@model Restaurant.WebApplication.ViewModels.IndexViewModel
+<header>
+    <div class="header-block d-flex align-items-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <div class="header-left d-flex flex-column flex-md-row align-items-center">
+                        <p class="d-flex align-items-center"><i class="fas fa-envelope"></i>@Model.DesignerModel.Email</p>
+                        <p class="d-flex align-items-center"><i class="fas fa-phone"></i>@Model.DesignerModel.PhoneNumber</p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="header-right d-flex flex-column flex-md-row justify-content-md-end justify-content-center align-items-center">
+                        <div class="social-link d-flex">
+                        <a target="_blank" href="@Model.DesignerModel.FacebookLink"><i class="fab fa-facebook-f"> </i></a>
+                        @*<a href="@Model.DesignerModel.InstagramLink"><i class="fab fa-twitter"></i></a>*@
+                        <a target="_blank" href="@Model.DesignerModel.InstagramLink"><i class="fab fa-instagram"> </i></a>
+                        </div>
+                        @*<div class="language">
+                                <div class="selected-language">
+                                    <img src="~/images/homepage01/usa.jpg" alt="">English<i class="arrow_carrot-down"></i>
+                                    <ul class="list-language">
+                                        <li><img src="~/images/homepage01/usa.jpg" alt="">English</li>
+                                        <li><img src="~/images/homepage01/usa.jpg" alt="">Spain</li>
+                                        <li><img src="~/images/homepage01/usa.jpg" alt="">Japan</li>
+                                    </ul>
+                                </div>
+                            </div>*@
+                        <div class="login d-flex"><a href="login.html"><i class="fas fa-user"></i>Login</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <nav class="navigation d-flex align-items-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-2"><a class="logo" href="/"><img src="~/images/logo.png" alt=""></a></div>
+                <div class="col-8">
+                    <div class="navgition-menu d-flex align-items-center justify-content-center">
+                        <ul class="mb-0">
+                            <li class="toggleable"><a class="menu-item" href="/">Главная</a></li>
+                            <li class="toggleable"><a class="menu-item" href="/Designer">Панель</a></li>
+                            <li class="toggleable"><a class="menu-item" href="/Blog/Index">Блог</a></li>
+                            <li class="toggleable"><a class="menu-item" href="/Career/Index">Карьера</a></li>
+                            <li class="toggleable"><a class="menu-item" href="/Home/Contact">Контакты</a></li>
+                            <li class="toggleable"><a class="menu-item" href="/Home/About">О Нас</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="product-function d-flex align-items-center justify-content-end">
+                        <div id="cart"><a class="function-icon icon_bag_alt" href=""></a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div id="mobile-menu">
+        <div class="container">
+            <div class="row">
+                <div class="col-3">
+                    <div class="mobile-menu_block d-flex align-items-center">
+                        <a class="mobile-menu--control" href="#"><i class="fas fa-bars"></i></a>
+                        <div id="ogami-mobile-menu">
+                            <button class="no-round-btn" id="mobile-menu--closebtn">Закрыть</button>
+                            <div class="mobile-menu_items">
+                                <ul class="mb-0 d-flex flex-column">
+                                    <li class="toggleable"><a class="menu-item" href="/">Главная</a></li>
+                                    <li class="toggleable"><a class="menu-item" href="/Designer">Панель</a></li>
+                                    <li class="toggleable"><a class="menu-item" href="/Blog/Index">Блог</a></li>
+                                    <li class="toggleable"><a class="menu-item" href="/Career/Index">Карьера</a></li>
+                                    <li class="toggleable"><a class="menu-item" href="/Home/Contact">Контакты</a></li>
+                                    <li class="toggleable"><a class="menu-item" href="/Home/About">О Нас</a></li>
+                                </ul>
+                            </div>
+                            <div class="mobile-login">
+                                <h2>My account</h2><a href="login.html">Вход</a><a href="register.html">Регистрация</a>
+                            </div>
+                            <div class="mobile-social"><a href=""><i class="fab fa-facebook-f"> </i></a><a href=""><i class="fab fa-twitter"></i></a><a href=""><i class="fab fa-invision"> </i></a><a href=""><i class="fab fa-pinterest-p"> </i></a></div>
+                        </div>
+                        <div class="ogamin-mobile-menu_bg"></div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="mobile-menu_logo text-center d-flex justify-content-center align-items-center"><a href="/"><img src="~/images/logo.png" alt=""></a></div>
+                </div>
+                <div class="col-3">
+                    <div class="mobile-product_function d-flex align-items-center justify-content-end"><a class="function-icon icon_bag_alt" href="shop_cart.html"></a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="navigation-filter">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-12 col-lg-12 col-xl-12 order-1 order-md-2">
+                    <div class="website-search">
+                        <div class="row no-gutters">
+                            <div class="col-0 col-md-0 col-lg-4 col-xl-3">
+                                <div class="filter-search">
+                                    <div class="categories-select d-flex align-items-center justify-content-around"><span>All Categories</span><i class="arrow_carrot-down"></i></div>
+                                    <div class="categories-select_box">
+                                        <ul>
+                                            <li>Fruit & Nut Gifts</li>
+                                            <li>Fresh Berries</li>
+                                            <li>Ocean Foods</li>
+                                            <li>Butter & Eggs</li>
+                                            <li>Ocean Foods</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-8 col-md-8 col-lg-5 col-xl-7">
+                                <div class="search-input">
+                                    <input class="no-round-input no-border" type="text" placeholder="Название продукта">
+                                </div>
+                            </div>
+                            <div class="col-4 col-md-4 col-lg-3 col-xl-2">
+                                <button class="no-round-btn">Поиск</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>

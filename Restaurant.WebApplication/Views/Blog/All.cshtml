@@ -6,16 +6,14 @@
 <table id="listingTable">
     <tr>
         <th>Title</th>
-        <th>Description</th>
         <th>Created on</th>
-        <th></th>
+        <th><a href="/Blog/Create"><span class="glyphicon glyphicon-plus" title="Add"></span></a></th>
         <th></th>
     </tr>
     @foreach (var item in Model.Blogs)
     {
         <tr>
             <td>@item.Name</td>
-            <td>@item.Description</td>
             <td>@item.CreateDate.ToString("dd/MM/yyyy hh:mm")</td>
             <td><a href="/Blog/Create?Id=@item.Id"><span class="glyphicon glyphicon-edit" title="Edit"></span></a></td>
             <td><a href="/Blog/Delete/@item.Id"><span class="glyphicon glyphicon-trash" style="color:red" title="Delete"></span></a></td>

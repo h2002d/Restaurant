@@ -22,6 +22,12 @@ namespace Restaurant.WebApplication.Services.Blogs
             return _blogRepository.Create(blog);
         }
 
+        public void Delete(int id)
+        {
+            var blog = _blogRepository.GetBlog(id);
+            _blogRepository.Delete(blog);
+        }
+
         public BlogMainViewModel GetBlogMainViewModel(int page)
         {
             var blogs = _blogRepository.GetBlogs(page);

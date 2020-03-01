@@ -31,6 +31,7 @@ namespace Restaurant.WebApplication.Repository
 
         public void Delete(Blog blog)
         {
+            _applicationDbContext.BlogImages.RemoveRange(blog.BlogImages);
             _applicationDbContext.Blog.Remove(blog);
             _applicationDbContext.SaveChanges();
         }

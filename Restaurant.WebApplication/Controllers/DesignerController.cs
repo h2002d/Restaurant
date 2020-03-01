@@ -17,13 +17,15 @@ namespace Restaurant.WebApplication.Controllers
         private readonly IMapper _mapper;
         private readonly ISliderService _sliderService;
         private readonly IDesignerService _designerService;
+        private readonly IFeedbackService _feedbackService;
         private IHostingEnvironment _hostingEnvironment;
-        public DesignerController(IMapper mapper, ISliderService sliderService, IHostingEnvironment hostingEnvironment, IDesignerService designerService)
+        public DesignerController(IMapper mapper, ISliderService sliderService, IHostingEnvironment hostingEnvironment, IFeedbackService feedbackService, IDesignerService designerService)
         {
             _mapper = mapper;
             _sliderService = sliderService;
             _designerService = designerService;
             _hostingEnvironment = hostingEnvironment;
+            _feedbackService = feedbackService;
         }
         //need to implement page to open all the pages of designer
         public IActionResult Index()
@@ -81,6 +83,40 @@ namespace Restaurant.WebApplication.Controllers
             return View(_mapper.Map<DesignerViewModel>(design));
         }
 
+        #endregion
+
+        #region Feedback
+        public IActionResult FeedbackAll()
+        {
+            var feedbacks = _feedbackService.GetFeedbacks();
+            var model = new FeedbackMainViewModel();
+            model.Feedbacks = feedbacks;
+            return View(model);
+        }
+
+        public IActionResult FeedbackCreate(int Id)
+        {
+            var feedbacks = _feedbackService.GetFeedback(Id);
+            return View(_mapper.Map<FeedbackViewModel>(feedbacks));
+        }
+
+        public IActionResult FeedbackDelete(int Id)
+        {
+            _feedbackService.Delete(Id);
+            return RedirectToAction("FeedbackAll");
+        }
+
+        [HttpPost]
+        public IActionResult FeedbackCreate(FeedbackViewModel feedback)
+        {
+            if (feedback.Image != null)
+            {
+                var helper = new FeedbackImagesHelper(_hostingEnvironment);
+                feedback.ImagePath = helper.SaveSliderImageToPath(feedback.Image);
+            }
+            _feedbackService.Create(_mapper.Map<Feedback>(feedback));
+            return RedirectToAction("FeedbackAll");
+        }
         #endregion
     }
 }

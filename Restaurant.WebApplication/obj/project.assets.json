@@ -2740,6 +2740,9 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
+      },
+      "TinyMCE/5.2.0": {
+        "type": "package"
       }
     }
   },
@@ -4484,11 +4487,12 @@
       ]
     },
     "runtime.native.System.Security.Cryptography.Apple/4.3.0": {
-      "sha512": "jwjwlEL0Elv6gwoyaokRn12nv/JE+UW/DXJEbzhjCPvGbef36StnHKc9XaZD/rGWqYicrphZ7eumR/jdmNcjRg==",
+      "sha512": "DloMk88juo0OuOWr56QG7MNchmafTLYWvABy36izkrLI5VledI0rq28KGs1i9wbpeT9NPQrx/wTf8U2vazqQ3Q==",
       "type": "package",
       "path": "runtime.native.system.security.cryptography.apple/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/netstandard1.0/_._",
@@ -4523,11 +4527,12 @@
       ]
     },
     "runtime.opensuse.42.1-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
-      "sha512": "G2+96gYRbzp1JZCID6B+u2XJ0bs2wCubd6rE3+Tj436dKfnciF7YgsLi2VvLeJq6kxYyU4IJrVrpCvC8Yf6bhA==",
+      "sha512": "KeLz4HClKf+nFS7p/6Fi/CqyLXh81FpiGzcmuS8DGi9lUqSnZ6Es23/gv2O+1XVGfrbNmviF7CckBpavkBoIFQ==",
       "type": "package",
       "path": "runtime.opensuse.42.1-x64.runtime.native.system.security.cryptography.openssl/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "runtime.opensuse.42.1-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
@@ -4536,11 +4541,12 @@
       ]
     },
     "runtime.osx.10.10-x64.runtime.native.System.Security.Cryptography.Apple/4.3.0": {
-      "sha512": "Kh9W4agE0r/hK8AX1LvyQI2NrKHBL8pO0gRoDTdDb0LL6Ta1Z2OtFx3lOaAE0ZpCUc/dt9Wzs3rA7a3IsKdOVA==",
+      "sha512": "kVXCuMTrTlxq4XOOMAysuNwsXWpYeboGddNGpIgNSZmv1b6r/s/DPk0fYMB7Q5Qo4bY68o48jt4T4y5BVecbCQ==",
       "type": "package",
       "path": "runtime.osx.10.10-x64.runtime.native.system.security.cryptography.apple/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "runtime.osx.10.10-x64.runtime.native.system.security.cryptography.apple.4.3.0.nupkg.sha512",
@@ -4562,11 +4568,12 @@
       ]
     },
     "runtime.rhel.7-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
-      "sha512": "T5NvFgmHX0WH4c7lP72krsnk+IJI10vJf2j2twGE+5QBRA4RyRAgD+ZjEgdmpLOjW4B+nZGaadewTCUcR899OQ==",
+      "sha512": "nyFNiCk/r+VOiIqreLix8yN+q3Wga9+SE8BCgkf+2BwEKiNx6DyvFjCgkfV743/grxv8jHJ8gUK4XEQw7yzRYg==",
       "type": "package",
       "path": "runtime.rhel.7-x64.runtime.native.system.security.cryptography.openssl/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "runtime.rhel.7-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
@@ -4575,11 +4582,12 @@
       ]
     },
     "runtime.ubuntu.14.04-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
-      "sha512": "JGc0pAWRE8lB4Ucygk2pYSKbUPLlAIq6Bczf5/WF2D/VKJEPtYlVUMxk8fbl1zRfTWzSHi+VcFZlaPlWiNxeKg==",
+      "sha512": "ytoewC6wGorL7KoCAvRfsgoJPJbNq+64k2SqW6JcOAebWsFUvCCYgfzQMrnpvPiEl4OrblUlhF2ji+Q1+SVLrQ==",
       "type": "package",
       "path": "runtime.ubuntu.14.04-x64.runtime.native.system.security.cryptography.openssl/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "runtime.ubuntu.14.04-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
@@ -4884,11 +4892,12 @@
       ]
     },
     "System.Collections.NonGeneric/4.3.0": {
-      "sha512": "LE/oChpRvkSi3U25u0KnJcI44JeDZ1QJCyN4qFDx2uusEypdqR24w7lKYw21eYe5esuCBuc862wRmpF63Yy1KQ==",
+      "sha512": "prtjIEMhGUnQq6RnPEYLpFt8AtLbp9yq2zxOSrY7KJJZrw25Fi97IzBqY7iqssbM61Ek5b8f3MG/sG1N2sN5KA==",
       "type": "package",
       "path": "system.collections.nongeneric/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -7470,11 +7479,12 @@
       ]
     },
     "System.Runtime.Serialization.Primitives/4.3.0": {
-      "sha512": "2Z5t70a2SwMsfQDp9KOclaZNyQhfIga2gppq9lIUDM1A4ohTshn4JqT7ir8bvIhXgorWKYDAr6rPzEbi/nTGKg==",
+      "sha512": "Wz+0KOukJGAlXjtKr+5Xpuxf8+c8739RI1C+A2BoQZT+wMCCoMDDdO8/4IRHfaVINqL78GO8dW8G2lW/e45Mcw==",
       "type": "package",
       "path": "system.runtime.serialization.primitives/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -8665,11 +8675,12 @@
       ]
     },
     "System.Xml.XmlSerializer/4.3.0": {
-      "sha512": "VShQJhOxgD/5M2Z1IWm1vMaSqlbjo1zdFf8H7Ahte6bTvSUhUko/gDpAVVhGgGgTDeue4QyNg1fu1Zz2GKSEuQ==",
+      "sha512": "MYoTCP7EZ98RrANESW05J5ZwskKDoN0AuZ06ZflnowE50LTpbR5yRg3tHckTVm5j/m47stuGgCrCHWePyHS70Q==",
       "type": "package",
       "path": "system.xml.xmlserializer/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -8733,6 +8744,146 @@
         "system.xml.xmlserializer.4.3.0.nupkg.sha512",
         "system.xml.xmlserializer.nuspec"
       ]
+    },
+    "TinyMCE/5.2.0": {
+      "sha512": "9vpMdKAEZ7sGQg4Wd7wC1XpiCou9QOziFpieuMtopNrSr0JY7xNNPWs4GgqLFu2u99yD7C+WTQ3hUnw0U2y1sg==",
+      "type": "package",
+      "path": "tinymce/5.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "content/scripts/tinymce/jquery.tinymce.min.js",
+        "content/scripts/tinymce/langs/readme.md",
+        "content/scripts/tinymce/license.txt",
+        "content/scripts/tinymce/plugins/advlist/plugin.js",
+        "content/scripts/tinymce/plugins/advlist/plugin.min.js",
+        "content/scripts/tinymce/plugins/anchor/plugin.js",
+        "content/scripts/tinymce/plugins/anchor/plugin.min.js",
+        "content/scripts/tinymce/plugins/autolink/plugin.js",
+        "content/scripts/tinymce/plugins/autolink/plugin.min.js",
+        "content/scripts/tinymce/plugins/autoresize/plugin.js",
+        "content/scripts/tinymce/plugins/autoresize/plugin.min.js",
+        "content/scripts/tinymce/plugins/autosave/plugin.js",
+        "content/scripts/tinymce/plugins/autosave/plugin.min.js",
+        "content/scripts/tinymce/plugins/bbcode/plugin.js",
+        "content/scripts/tinymce/plugins/bbcode/plugin.min.js",
+        "content/scripts/tinymce/plugins/charmap/plugin.js",
+        "content/scripts/tinymce/plugins/charmap/plugin.min.js",
+        "content/scripts/tinymce/plugins/code/plugin.js",
+        "content/scripts/tinymce/plugins/code/plugin.min.js",
+        "content/scripts/tinymce/plugins/codesample/plugin.js",
+        "content/scripts/tinymce/plugins/codesample/plugin.min.js",
+        "content/scripts/tinymce/plugins/colorpicker/plugin.js",
+        "content/scripts/tinymce/plugins/colorpicker/plugin.min.js",
+        "content/scripts/tinymce/plugins/contextmenu/plugin.js",
+        "content/scripts/tinymce/plugins/contextmenu/plugin.min.js",
+        "content/scripts/tinymce/plugins/directionality/plugin.js",
+        "content/scripts/tinymce/plugins/directionality/plugin.min.js",
+        "content/scripts/tinymce/plugins/emoticons/js/emojis.js",
+        "content/scripts/tinymce/plugins/emoticons/js/emojis.min.js",
+        "content/scripts/tinymce/plugins/emoticons/plugin.js",
+        "content/scripts/tinymce/plugins/emoticons/plugin.min.js",
+        "content/scripts/tinymce/plugins/fullpage/plugin.js",
+        "content/scripts/tinymce/plugins/fullpage/plugin.min.js",
+        "content/scripts/tinymce/plugins/fullscreen/plugin.js",
+        "content/scripts/tinymce/plugins/fullscreen/plugin.min.js",
+        "content/scripts/tinymce/plugins/help/plugin.js",
+        "content/scripts/tinymce/plugins/help/plugin.min.js",
+        "content/scripts/tinymce/plugins/hr/plugin.js",
+        "content/scripts/tinymce/plugins/hr/plugin.min.js",
+        "content/scripts/tinymce/plugins/image/plugin.js",
+        "content/scripts/tinymce/plugins/image/plugin.min.js",
+        "content/scripts/tinymce/plugins/imagetools/plugin.js",
+        "content/scripts/tinymce/plugins/imagetools/plugin.min.js",
+        "content/scripts/tinymce/plugins/importcss/plugin.js",
+        "content/scripts/tinymce/plugins/importcss/plugin.min.js",
+        "content/scripts/tinymce/plugins/insertdatetime/plugin.js",
+        "content/scripts/tinymce/plugins/insertdatetime/plugin.min.js",
+        "content/scripts/tinymce/plugins/legacyoutput/plugin.js",
+        "content/scripts/tinymce/plugins/legacyoutput/plugin.min.js",
+        "content/scripts/tinymce/plugins/link/plugin.js",
+        "content/scripts/tinymce/plugins/link/plugin.min.js",
+        "content/scripts/tinymce/plugins/lists/plugin.js",
+        "content/scripts/tinymce/plugins/lists/plugin.min.js",
+        "content/scripts/tinymce/plugins/media/plugin.js",
+        "content/scripts/tinymce/plugins/media/plugin.min.js",
+        "content/scripts/tinymce/plugins/nonbreaking/plugin.js",
+        "content/scripts/tinymce/plugins/nonbreaking/plugin.min.js",
+        "content/scripts/tinymce/plugins/noneditable/plugin.js",
+        "content/scripts/tinymce/plugins/noneditable/plugin.min.js",
+        "content/scripts/tinymce/plugins/pagebreak/plugin.js",
+        "content/scripts/tinymce/plugins/pagebreak/plugin.min.js",
+        "content/scripts/tinymce/plugins/paste/plugin.js",
+        "content/scripts/tinymce/plugins/paste/plugin.min.js",
+        "content/scripts/tinymce/plugins/preview/plugin.js",
+        "content/scripts/tinymce/plugins/preview/plugin.min.js",
+        "content/scripts/tinymce/plugins/print/plugin.js",
+        "content/scripts/tinymce/plugins/print/plugin.min.js",
+        "content/scripts/tinymce/plugins/quickbars/plugin.js",
+        "content/scripts/tinymce/plugins/quickbars/plugin.min.js",
+        "content/scripts/tinymce/plugins/save/plugin.js",
+        "content/scripts/tinymce/plugins/save/plugin.min.js",
+        "content/scripts/tinymce/plugins/searchreplace/plugin.js",
+        "content/scripts/tinymce/plugins/searchreplace/plugin.min.js",
+        "content/scripts/tinymce/plugins/spellchecker/plugin.js",
+        "content/scripts/tinymce/plugins/spellchecker/plugin.min.js",
+        "content/scripts/tinymce/plugins/tabfocus/plugin.js",
+        "content/scripts/tinymce/plugins/tabfocus/plugin.min.js",
+        "content/scripts/tinymce/plugins/table/plugin.js",
+        "content/scripts/tinymce/plugins/table/plugin.min.js",
+        "content/scripts/tinymce/plugins/template/plugin.js",
+        "content/scripts/tinymce/plugins/template/plugin.min.js",
+        "content/scripts/tinymce/plugins/textcolor/plugin.js",
+        "content/scripts/tinymce/plugins/textcolor/plugin.min.js",
+        "content/scripts/tinymce/plugins/textpattern/plugin.js",
+        "content/scripts/tinymce/plugins/textpattern/plugin.min.js",
+        "content/scripts/tinymce/plugins/toc/plugin.js",
+        "content/scripts/tinymce/plugins/toc/plugin.min.js",
+        "content/scripts/tinymce/plugins/visualblocks/plugin.js",
+        "content/scripts/tinymce/plugins/visualblocks/plugin.min.js",
+        "content/scripts/tinymce/plugins/visualchars/plugin.js",
+        "content/scripts/tinymce/plugins/visualchars/plugin.min.js",
+        "content/scripts/tinymce/plugins/wordcount/plugin.js",
+        "content/scripts/tinymce/plugins/wordcount/plugin.min.js",
+        "content/scripts/tinymce/skins/content/dark/content.css",
+        "content/scripts/tinymce/skins/content/dark/content.min.css",
+        "content/scripts/tinymce/skins/content/default/content.css",
+        "content/scripts/tinymce/skins/content/default/content.min.css",
+        "content/scripts/tinymce/skins/content/document/content.css",
+        "content/scripts/tinymce/skins/content/document/content.min.css",
+        "content/scripts/tinymce/skins/content/writer/content.css",
+        "content/scripts/tinymce/skins/content/writer/content.min.css",
+        "content/scripts/tinymce/skins/ui/oxide-dark/content.css",
+        "content/scripts/tinymce/skins/ui/oxide-dark/content.inline.css",
+        "content/scripts/tinymce/skins/ui/oxide-dark/content.inline.min.css",
+        "content/scripts/tinymce/skins/ui/oxide-dark/content.min.css",
+        "content/scripts/tinymce/skins/ui/oxide-dark/content.mobile.css",
+        "content/scripts/tinymce/skins/ui/oxide-dark/content.mobile.min.css",
+        "content/scripts/tinymce/skins/ui/oxide-dark/fonts/tinymce-mobile.woff",
+        "content/scripts/tinymce/skins/ui/oxide-dark/skin.css",
+        "content/scripts/tinymce/skins/ui/oxide-dark/skin.min.css",
+        "content/scripts/tinymce/skins/ui/oxide-dark/skin.mobile.css",
+        "content/scripts/tinymce/skins/ui/oxide-dark/skin.mobile.min.css",
+        "content/scripts/tinymce/skins/ui/oxide/content.css",
+        "content/scripts/tinymce/skins/ui/oxide/content.inline.css",
+        "content/scripts/tinymce/skins/ui/oxide/content.inline.min.css",
+        "content/scripts/tinymce/skins/ui/oxide/content.min.css",
+        "content/scripts/tinymce/skins/ui/oxide/content.mobile.css",
+        "content/scripts/tinymce/skins/ui/oxide/content.mobile.min.css",
+        "content/scripts/tinymce/skins/ui/oxide/fonts/tinymce-mobile.woff",
+        "content/scripts/tinymce/skins/ui/oxide/skin.css",
+        "content/scripts/tinymce/skins/ui/oxide/skin.min.css",
+        "content/scripts/tinymce/skins/ui/oxide/skin.mobile.css",
+        "content/scripts/tinymce/skins/ui/oxide/skin.mobile.min.css",
+        "content/scripts/tinymce/themes/mobile/theme.js",
+        "content/scripts/tinymce/themes/mobile/theme.min.js",
+        "content/scripts/tinymce/themes/silver/theme.js",
+        "content/scripts/tinymce/themes/silver/theme.min.js",
+        "content/scripts/tinymce/tinymce.js",
+        "content/scripts/tinymce/tinymce.min.js",
+        "tinymce.5.2.0.nupkg.sha512",
+        "tinymce.nuspec"
+      ]
     }
   },
   "projectFileDependencyGroups": {
@@ -8747,29 +8898,28 @@
       "Microsoft.EntityFrameworkCore.Tools >= 3.1.1",
       "Microsoft.Extensions.Logging.Debug >= 3.1.1",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 3.1.1",
+      "TinyMCE >= 5.2.0",
       "glyphicon >= 1.0.1"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\davitha\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\davit\\.nuget\\packages\\": {},
+    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\davitha\\source\\repos\\Restaurant\\Restaurant.WebApplication\\Restaurant.WebApplication.csproj",
+      "projectUniqueName": "C:\\Projects\\Restaurant\\Restaurant.WebApplication\\Restaurant.WebApplication.csproj",
       "projectName": "Restaurant.WebApplication",
-      "projectPath": "C:\\Users\\davitha\\source\\repos\\Restaurant\\Restaurant.WebApplication\\Restaurant.WebApplication.csproj",
-      "packagesPath": "C:\\Users\\davitha\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\davitha\\source\\repos\\Restaurant\\Restaurant.WebApplication\\obj\\",
+      "projectPath": "C:\\Projects\\Restaurant\\Restaurant.WebApplication\\Restaurant.WebApplication.csproj",
+      "packagesPath": "C:\\Users\\davit\\.nuget\\packages\\",
+      "outputPath": "C:\\Projects\\Restaurant\\Restaurant.WebApplication\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\",
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        "C:\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\davitha\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\davit\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
@@ -8833,6 +8983,10 @@
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
             "target": "Package",
             "version": "[3.1.1, )"
+          },
+          "TinyMCE": {
+            "target": "Package",
+            "version": "[5.2.0, )"
           },
           "glyphicon": {
             "target": "Package",

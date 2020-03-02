@@ -2,7 +2,7 @@
 <footer>
     <div class="container">
         <div class="row">
-            <div class="col-12 col-sm-12 col-md-4 text-sm-center text-md-left">
+            <div class="col-12 col-sm-12 col-md-6 text-sm-center text-md-left">
                 <div class="footer-logo"><img src="~/images/logo.png" alt=""></div>
                 <div class="footer-contact">
                     <p>Address: @Model.DesignerModel.Address</p>
@@ -15,21 +15,30 @@
                     <a target="_blank" href="@Model.DesignerModel.InstagramLink"><i class="fab fa-instagram"> </i></a>
                 </div>
             </div>
-            <div class="col-md-8">
+            <div class="col-md-6">
                 <div class="row">
-                    <div class="col-12 col-sm-4 text-sm-center text-md-left">
+                    @*<div class="col-12 col-sm-4 text-sm-center text-md-left">
                         <div class="footer-quicklink">
                             <h5>Infomation</h5><a href="about_us.html">About us</a><a href="checkout.html">Check out</a><a href="contact.html">Contact</a><a href="about_us.html">Service</a>
                         </div>
-                    </div>
+                    </div>*@
                     <div class="col-12 col-sm-4 text-sm-center text-md-left">
                         <div class="footer-quicklink">
-                            <h5>My Account</h5><a href="login.html">My Account</a><a href="contact.html">Contact</a><a href="shop_cart.html">Shopping cart</a><a href="shop_grid+list_3col.html">Shop</a>
+                            <h5>Разделы</h5>
+                            <a href="/">Главная</a>
+                            <a href="/Designer">Панель</a>
+                            <a href="/Blog/Index">Блог</a>
+                            <a href="/Career/Index">Карьера</a>
+                            <a href="/Home/Contact">Контакты</a>
+                            <a href="/Home/About">О Нас</a>
                         </div>
                     </div>
                     <div class="col-12 col-sm-4 text-sm-center text-md-left">
                         <div class="footer-quicklink">
-                            <h5>Quick Shop</h5><a href="about_us.html">About us</a><a href="checkout.html">Check out</a><a href="contact.html">Contact</a><a href="about_us.html">Service</a>
+                            <h5>Меню</h5>
+                            <a href="#">СТОЛОВАЯ</a>
+                            <a href="#">ВЫПЕЧКА</a>
+                            <a href="#">ОПТОВАЯ ПРОДАЖА</a>
                         </div>
                     </div>
                 </div>
@@ -39,9 +48,8 @@
     <div class="footer-credit">
         <div class="container">
             <div class="footer-creadit_block d-flex flex-column flex-md-row justify-content-start justify-content-md-between align-items-baseline align-items-md-center">
-                <p class="author">Copyright © 2020 Novir - All Rights Reserved.</p><img class="payment-method" src="~/images/payment.png" alt="">
+                <p class="author">Copyright © 2020 KAR-FOOD, Developed by <a href="https://www.facebook.com/novirarm">Novir</a> All Rights Reserved.</p><img class="payment-method" src="~/images/payment.png" alt="">
             </div>
         </div>
     </div>
 </footer>
-

@@ -1,23 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Projects\\Restaurant\\Restaurant.WebApplication\\Restaurant.WebApplication.csproj": {}
+    "C:\\Users\\davitha\\source\\repos\\Restaurant\\Restaurant.WebApplication\\Restaurant.WebApplication.csproj": {}
   },
   "projects": {
-    "C:\\Projects\\Restaurant\\Restaurant.WebApplication\\Restaurant.WebApplication.csproj": {
+    "C:\\Users\\davitha\\source\\repos\\Restaurant\\Restaurant.WebApplication\\Restaurant.WebApplication.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Projects\\Restaurant\\Restaurant.WebApplication\\Restaurant.WebApplication.csproj",
+        "projectUniqueName": "C:\\Users\\davitha\\source\\repos\\Restaurant\\Restaurant.WebApplication\\Restaurant.WebApplication.csproj",
         "projectName": "Restaurant.WebApplication",
-        "projectPath": "C:\\Projects\\Restaurant\\Restaurant.WebApplication\\Restaurant.WebApplication.csproj",
-        "packagesPath": "C:\\Users\\davit\\.nuget\\packages\\",
-        "outputPath": "C:\\Projects\\Restaurant\\Restaurant.WebApplication\\obj\\",
+        "projectPath": "C:\\Users\\davitha\\source\\repos\\Restaurant\\Restaurant.WebApplication\\Restaurant.WebApplication.csproj",
+        "packagesPath": "C:\\Users\\davitha\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\davitha\\source\\repos\\Restaurant\\Restaurant.WebApplication\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\davit\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\davitha\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],

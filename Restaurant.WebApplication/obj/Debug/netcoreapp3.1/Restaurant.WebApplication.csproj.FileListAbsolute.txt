@@ -459,3 +459,7 @@ C:\Users\davitha\source\repos\Restaurant\Restaurant.WebApplication\obj\Debug\net
 C:\Users\davitha\source\repos\Restaurant\Restaurant.WebApplication\obj\Debug\netcoreapp3.1\Razor\Views\Designer\CreateSlider.cshtml.g.cs
 C:\Users\davitha\source\repos\Restaurant\Restaurant.WebApplication\obj\Debug\netcoreapp3.1\Razor\Views\Designer\Main.cshtml.g.cs
 C:\Users\davitha\source\repos\Restaurant\Restaurant.WebApplication\obj\Debug\netcoreapp3.1\Razor\Views\Designer\Index.cshtml.g.cs
+C:\Users\davitha\source\repos\Restaurant\Restaurant.WebApplication\obj\Debug\netcoreapp3.1\Razor\Views\Designer\FeedbackAll.cshtml.g.cs
+C:\Users\davitha\source\repos\Restaurant\Restaurant.WebApplication\obj\Debug\netcoreapp3.1\Razor\Views\Designer\FeedbackCreate.cshtml.g.cs
+C:\Users\davitha\source\repos\Restaurant\Restaurant.WebApplication\obj\Debug\netcoreapp3.1\Razor\Views\Home\Footer.cshtml.g.cs
+C:\Users\davitha\source\repos\Restaurant\Restaurant.WebApplication\obj\Debug\netcoreapp3.1\Razor\Views\Home\Header.cshtml.g.cs

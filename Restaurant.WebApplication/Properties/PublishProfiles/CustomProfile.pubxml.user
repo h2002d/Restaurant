@@ -1088,25 +1088,25 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/15/2019 08:36:30</publishTime>
     </File>
     <File Include="Restaurant.WebApplication.deps.json">
-      <publishTime>03/01/2020 21:10:14</publishTime>
+      <publishTime>03/03/2020 23:06:22</publishTime>
     </File>
     <File Include="Restaurant.WebApplication.dll">
-      <publishTime>03/01/2020 21:04:26</publishTime>
+      <publishTime>03/03/2020 23:06:20</publishTime>
     </File>
     <File Include="Restaurant.WebApplication.exe">
-      <publishTime>03/01/2020 21:04:26</publishTime>
+      <publishTime>03/03/2020 23:06:20</publishTime>
     </File>
     <File Include="Restaurant.WebApplication.pdb">
-      <publishTime>03/01/2020 21:04:26</publishTime>
+      <publishTime>03/03/2020 23:06:20</publishTime>
     </File>
     <File Include="Restaurant.WebApplication.runtimeconfig.json">
-      <publishTime>03/01/2020 20:58:50</publishTime>
+      <publishTime>03/03/2020 23:02:48</publishTime>
     </File>
     <File Include="Restaurant.WebApplication.Views.dll">
-      <publishTime>03/01/2020 20:44:23</publishTime>
+      <publishTime>03/03/2020 23:06:22</publishTime>
     </File>
     <File Include="Restaurant.WebApplication.Views.pdb">
-      <publishTime>03/01/2020 21:04:27</publishTime>
+      <publishTime>03/03/2020 23:06:22</publishTime>
     </File>
     <File Include="ru/Microsoft.CodeAnalysis.CSharp.resources.dll">
       <publishTime>09/12/2019 17:09:00</publishTime>
@@ -1181,7 +1181,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>09/12/2019 17:08:36</publishTime>
     </File>
     <File Include="web.config">
-      <publishTime>03/01/2020 21:04:28</publishTime>
+      <publishTime>03/03/2020 23:03:24</publishTime>
     </File>
     <File Include="wwwroot/css/animate.css">
       <publishTime>03/14/2019 17:53:04</publishTime>

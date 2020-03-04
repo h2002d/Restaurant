@@ -39,13 +39,13 @@ window.onload = function () {
 			$(this).children().toggleClass('icon_minus-06 icon_plus');
 		});
 
-		$('.mobile-menu--control').on('click', function(event) {
-			event.preventDefault()
+		$(document).on('click', '.mobile-menu--control', function(event) {
+			event.preventDefault();
 			$('#ogami-mobile-menu').css({
-				left: '0',
+				left: '0'
 			});
 			$('.ogamin-mobile-menu_bg').css({
-				display: 'block',
+				display: 'block'
 			});
 		});
 		$('#mobile-menu--closebtn').on('click', closeMenu );
@@ -53,10 +53,10 @@ window.onload = function () {
 
 		function closeMenu(event) {
 			$('#ogami-mobile-menu').css({
-				left: '-100%',
+				left: '-100%'
 			});
 			$('.ogamin-mobile-menu_bg').css({
-				display: 'none',
+				display: 'none'
 			});
 		}
 

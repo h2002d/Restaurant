@@ -4,9 +4,9 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Restaurant.WebApplication.Models
 {
-    public partial class Products
+    public partial class Product
     {
-        public Products()
+        public Product()
         {
             OrderProduct = new HashSet<OrderProduct>();
             ProductDays = new HashSet<ProductDays>();

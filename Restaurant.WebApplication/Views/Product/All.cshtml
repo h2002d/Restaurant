@@ -1,0 +1,25 @@
+﻿@model Restaurant.WebApplication.ViewModels.ProductMainViewModel
+
+@{
+    ViewData["Title"] = "All";
+}
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Price</th>
+            <th><a href="/Product/Create"><span class="glyphicon glyphicon-plus" title="Add"></span></a></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Products)
+        {
+            <tr>
+                <td>@item.Name</td>
+                <td>@item.Price</td>
+                <td><a href="/Product/Create?Id=@item.Id"><span class="glyphicon glyphicon-edit" title="Edit"></span></a></td>
+                <td><a href="/Product/Delete/@item.Id"><span class="glyphicon glyphicon-trash" style="color:red" title="Delete"></span></a></td>
+            </tr>
+        }
+    </tbody>
+</table>

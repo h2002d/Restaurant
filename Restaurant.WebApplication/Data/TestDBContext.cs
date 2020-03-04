@@ -27,7 +27,7 @@ namespace Restaurant.WebApplication.Data
         public virtual DbSet<ParentCategory> ParentCategory { get; set; }
         public virtual DbSet<ProductDays> ProductDays { get; set; }
         public virtual DbSet<ProductImages> ProductImages { get; set; }
-        public virtual DbSet<Products> Products { get; set; }
+        public virtual DbSet<Product> Products { get; set; }
 
         public virtual DbSet<BlogImages> BlogImages { get; set; }
         public virtual DbSet<Blog> Blog { get; set; }
@@ -201,7 +201,7 @@ namespace Restaurant.WebApplication.Data
                     .HasConstraintName("FK_ProductImages_Products");
             });
 
-            modelBuilder.Entity<Products>(entity =>
+            modelBuilder.Entity<Product>(entity =>
             {
                 entity.Property(e => e.CreateDate).HasColumnType("datetime");
 

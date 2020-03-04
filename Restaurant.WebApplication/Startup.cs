@@ -17,6 +17,7 @@ using Restaurant.WebApplication.Repository;
 using Restaurant.WebApplication.Services.Blogs;
 using Restaurant.WebApplication.Repository.Designers;
 using Restaurant.WebApplication.Services.Designers;
+using Restaurant.WebApplication.Services.Products;
 
 namespace Restaurant.WebApplication
 {
@@ -52,6 +53,7 @@ namespace Restaurant.WebApplication
             services.AddScoped<ISliderRepository, SliderRepository>();
             services.AddScoped<IDesignerRepository, DesignerRepository>();
             services.AddScoped<IFeedbackRepository, FeedbackRepository>();
+            services.AddScoped<IProductRepository, ProductRepository>();
 
 
             services.AddScoped<IBlogService, BlogService>();
@@ -59,6 +61,7 @@ namespace Restaurant.WebApplication
             services.AddScoped<ISliderService, SliderService>();
             services.AddScoped<IDesignerService, DesignerService>();
             services.AddScoped<IFeedbackService, FeedbackService>();
+            services.AddScoped<IProductService, ProductService>();
 
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
             services.AddMvc().AddRazorRuntimeCompilation();

@@ -1,4 +1,4 @@
-﻿@model Restaurant.WebApplication.Models.Products
+﻿@model Restaurant.WebApplication.ViewModels.ProductViewModel
 
 @{
     ViewData["Title"] = "Create";
@@ -34,7 +34,23 @@
             <div class="form-group" id="category-container">
                 
             </div>
-             
+            <div class="form-group">
+                <ul>
+                    @if (Model != null)
+                    {
+                    @foreach (var image in Model.ProductImages)
+                        {
+                    <li>
+                        <img src="@image.ImagePath" style="width:250px;height:250px;" />
+                        <td><a href="/Blog/DeleteImage?Id=@image.Id"><span class="glyphicon glyphicon-trash" style="color:red" title="Delete"></span></a></td>
+                    </li>
+                        }
+                    }
+                    <li>
+                        <input type="file" name="formFiles" id="formFiles" class="form-control" multiple accept="image/x-png,image/gif,image/jpeg" />
+                    </li>
+                </ul>
+            </div>
 
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />

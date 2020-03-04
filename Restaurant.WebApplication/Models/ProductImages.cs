@@ -10,6 +10,6 @@ namespace Restaurant.WebApplication.Models
         public string ImagePath { get; set; }
         public DateTime UploadDate { get; set; }
 
-        public virtual Products Product { get; set; }
+        public virtual Product Product { get; set; }
     }
 }

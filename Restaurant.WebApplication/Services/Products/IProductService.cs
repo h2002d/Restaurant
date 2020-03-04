@@ -4,9 +4,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Restaurant.WebApplication.Repository
+namespace Restaurant.WebApplication.Services.Products
 {
-    public interface IProductRepository
+    public interface IProductService
     {
         Product Create(Product product);
         void Delete(Product product);

@@ -4,11 +4,11 @@ using System.Collections.Generic;
 
 namespace Restaurant.WebApplication.Models
 {
-    public partial class Category : ViewModelBase
+    public partial class Category
     {
         public Category()
         {
-            Products = new HashSet<Products>();
+            Products = new HashSet<Product>();
         }
 
         public int Id { get; set; }
@@ -17,6 +17,6 @@ namespace Restaurant.WebApplication.Models
         public int ParentId { get; set; }
 
         public virtual ParentCategory Parent { get; set; }
-        public virtual ICollection<Products> Products { get; set; }
+        public virtual ICollection<Product> Products { get; set; }
     }
 }

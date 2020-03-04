@@ -15,13 +15,11 @@ namespace Restaurant.WebApplication.Repository
         {
             _applicationDbContext = applicationDbContext;
         }
-        public Products Create(Products product)
+        public Product Create(Product product)
         {
-            var localCustomer = GetProduct(product.Id);
             product.CreateDate = DateTime.Now;
-            if (localCustomer != null)
+            if (product.Id != 0)
             {
-                _applicationDbContext.Entry(localCustomer).State = EntityState.Detached;
                 _applicationDbContext.Products.Update(product);
             }
             else
@@ -30,26 +28,49 @@ namespace Restaurant.WebApplication.Repository
             return product;
         }
 
-        public void Delete(Products product)
+        public void Delete(Product product)
         {
             _applicationDbContext.Products.Remove(product);
             _applicationDbContext.SaveChanges();
         }
 
-        public Products GetProduct(int productId)
+        public Product GetProduct(int productId)
         {
             try
             {
                 var product = _applicationDbContext.Products.Find(productId);
                 _applicationDbContext.Entry(product).Reference(p => p.Category).Load();
                 _applicationDbContext.Entry(product).Collection(p => p.ProductImages).Load();
-                //_applicationDbContext.SaveChanges();
                 return product;
             }
             catch
             {
                 return null;
             }
+        }
+
+        public List<Product> GetProductForAll(int page, int categoryId, string name)
+        {
+
+            var products = _applicationDbContext.Products.Where(x => categoryId == 0 ? true : x.CategoryId == categoryId && String.IsNullOrEmpty(name) ? true : x.Name.Contains(name)).ToList();
+            return products;
+        }
+
+        public List<Product> GetProducts()
+        {
+            return _applicationDbContext.Products.ToList();
+        }
+
+        public List<Product> GetProductsByCategoryId(int categoryId)
+        {
+
+            return _applicationDbContext.Products.Where(x => x.CategoryId == categoryId).ToList();
+        }
+
+        public List<Product> GetProductsByName(string name)
+        {
+            //need to test
+            return _applicationDbContext.Products.Where(x => x.Name.Contains(name)).ToList();
         }
     }
 }

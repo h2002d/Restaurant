@@ -17,11 +17,8 @@ namespace Restaurant.WebApplication.Repository
         }
         public Category Create(Category category)
         {
-            var localCustomer = GetCategory(category.Id);
-
-            if (localCustomer != null)
+            if (category.Id != 0)
             {
-                _applicationDbContext.Entry(localCustomer).State = EntityState.Detached;
                 _applicationDbContext.Category.Update(category);
             }
             else

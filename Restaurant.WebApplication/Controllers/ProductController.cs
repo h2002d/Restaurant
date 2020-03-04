@@ -39,7 +39,8 @@ namespace Restaurant.WebApplication.Controllers
         {
             var model = new ProductDetailViewModel();
             var product = _productService.GetProduct(Id);
-            return View(product);
+            model.Product = product;
+            return View(model);
         }
 
         public IActionResult Create(int Id)

@@ -25,7 +25,6 @@ namespace Restaurant.WebApplication.Data
         public virtual DbSet<OrderStatus> OrderStatus { get; set; }
         public virtual DbSet<Orders> Orders { get; set; }
         public virtual DbSet<ParentCategory> ParentCategory { get; set; }
-        public virtual DbSet<ProductDays> ProductDays { get; set; }
         public virtual DbSet<ProductImages> ProductImages { get; set; }
         public virtual DbSet<Product> Products { get; set; }
 
@@ -174,15 +173,6 @@ namespace Restaurant.WebApplication.Data
                 entity.Property(e => e.Name)
                     .IsRequired()
                     .HasMaxLength(50);
-            });
-
-            modelBuilder.Entity<ProductDays>(entity =>
-            {
-                entity.HasOne(d => d.Product)
-                    .WithMany(p => p.ProductDays)
-                    .HasForeignKey(d => d.ProductId)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK_ProductDays_Products");
             });
 
             modelBuilder.Entity<ProductImages>(entity =>

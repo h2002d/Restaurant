@@ -1,5 +1,6 @@
 ﻿using Restaurant.WebApplication.Models;
 using Restaurant.WebApplication.Repository;
+using Restaurant.WebApplication.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -31,9 +32,15 @@ namespace Restaurant.WebApplication.Services.Products
             return _productRepository.GetProduct(productId);
         }
 
-        public List<Product> GetProductForAll(int page, int categoryId, string name)
+        public ProductMainViewModel GetProductForAll(int page, int categoryId, string name)
         {
-            return _productRepository.GetProductForAll(page, categoryId, name);
+            ProductMainViewModel productMainViewModel = new ProductMainViewModel();
+
+            var products = _productRepository.GetProductForAll(page, categoryId, name); 
+            int count= (int)Math.Ceiling((decimal)_productRepository.GetProductForAllCount(categoryId, name) / 10);
+            productMainViewModel.Products = products;
+            productMainViewModel.PageCount = count;
+            return productMainViewModel;
         }
 
         public List<Product> GetProducts()

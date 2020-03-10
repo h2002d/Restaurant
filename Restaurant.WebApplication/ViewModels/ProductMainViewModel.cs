@@ -9,5 +9,6 @@ namespace Restaurant.WebApplication.ViewModels
     public class ProductMainViewModel
     {
         public List<Product> Products { get; set; }
+        public int PageCount { get; set; }
     }
 }

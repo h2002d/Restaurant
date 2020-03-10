@@ -21,21 +21,23 @@ namespace Restaurant.WebApplication.Controllers
             _dbContext = dbContext;
             _categoryRepository = categoryRepository;
         }
+
+        //must show all subcategories
         public IActionResult Index()
         {
             return View();
         }
 
-        public IActionResult Create()
-        {
-            return View();
-        }
+        //public IActionResult Create()
+        //{
+        //    return View();
+        //}
 
-        [HttpPost]
-        public IActionResult Create(ParentCategory parentCategory)
-        {
-            _categoryRepository.Create(parentCategory);
-            return View();
-        }
+        //[HttpPost]
+        //public IActionResult Create(ParentCategory parentCategory)
+        //{
+        //    _categoryRepository.Create(parentCategory);
+        //    return View();
+        //}
     }
 }

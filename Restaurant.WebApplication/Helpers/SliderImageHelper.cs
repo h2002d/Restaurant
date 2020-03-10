@@ -13,7 +13,7 @@ namespace Restaurant.WebApplication.Helpers
         private IHostingEnvironment _hostingEnvironment;
         public SliderImageHelper()
         {
-           
+
         }
         public SliderImageHelper(IHostingEnvironment hostingEnvironment)
         {
@@ -34,12 +34,13 @@ namespace Restaurant.WebApplication.Helpers
             if (file.Length > 0)
             {
                 //item.CopyTo(fileStream);
-                var filePath = Path.Combine(uploads, file.FileName);
+                var timeSpan = DateTime.Now.ToString("yyyyMMddHHmmssffff");
+                var filePath = Path.Combine(uploads, file.FileName + timeSpan);
                 using (var fileStream = new FileStream(filePath, FileMode.Create))
                 {
                     file.CopyTo(fileStream);
                 }
-                return $"/images/sliders/{file.FileName}";
+                return $"/images/sliders/{file.FileName + timeSpan}";
             }
             return null;
         }

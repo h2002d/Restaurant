@@ -71,14 +71,12 @@ namespace Restaurant.WebApplication.Controllers
 
 
         #region All
-        public IActionResult All(int page,int categoryId,string q)
+
+        public IActionResult All(int page = 1, int categoryId = 0, string q = "")
         {
             var products = _productService.GetProductForAll(page, categoryId, q);
-            var prodModel = new ProductMainViewModel();
-            prodModel.Products = products;
-            return View(prodModel);
+            return View(products);
         }
-
 
         #endregion
 

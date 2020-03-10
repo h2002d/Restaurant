@@ -931,3 +931,4 @@ C:\Projects\Restaurant\Restaurant.WebApplication\obj\Debug\netcoreapp3.1\Restaur
 C:\Projects\Restaurant\Restaurant.WebApplication\obj\Debug\netcoreapp3.1\Restaurant.WebApplication.csproj.CopyComplete
 C:\Projects\Restaurant\Restaurant.WebApplication\obj\Debug\netcoreapp3.1\Restaurant.WebApplication.dll
 C:\Projects\Restaurant\Restaurant.WebApplication\obj\Debug\netcoreapp3.1\Restaurant.WebApplication.pdb
+C:\Users\davitha\source\repos\Restaurant\Restaurant.WebApplication\obj\Debug\netcoreapp3.1\Razor\Views\Product\Index.cshtml.g.cs

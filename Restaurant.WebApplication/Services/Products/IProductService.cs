@@ -1,4 +1,5 @@
 ﻿using Restaurant.WebApplication.Models;
+using Restaurant.WebApplication.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,6 +15,6 @@ namespace Restaurant.WebApplication.Services.Products
         List<Product> GetProducts();
         List<Product> GetProductsByCategoryId(int categoryId);
         List<Product> GetProductsByName(string name);
-        List<Product> GetProductForAll(int page, int categoryId, string name);
+        ProductMainViewModel GetProductForAll(int page, int categoryId, string name);
     }
 }

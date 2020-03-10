@@ -15,5 +15,6 @@ namespace Restaurant.WebApplication.Repository
         List<Product> GetProductsByCategoryId(int categoryId);
         List<Product> GetProductsByName(string name);
         List<Product> GetProductForAll(int page, int categoryId, string name);
+        int GetProductForAllCount(int categoryId, string name);
     }
 }

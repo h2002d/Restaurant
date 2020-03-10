@@ -9,7 +9,6 @@ namespace Restaurant.WebApplication.Models
         public Product()
         {
             OrderProduct = new HashSet<OrderProduct>();
-            ProductDays = new HashSet<ProductDays>();
             ProductImages = new HashSet<ProductImages>();
         }
 
@@ -25,7 +24,7 @@ namespace Restaurant.WebApplication.Models
         public int CategoryId { get; set; }
         public virtual Category Category { get; set; }
         public virtual ICollection<OrderProduct> OrderProduct { get; set; }
-        public virtual ICollection<ProductDays> ProductDays { get; set; }
+        public string ProductDays { get; set; }
         public virtual ICollection<ProductImages> ProductImages { get; set; }
     }
 }

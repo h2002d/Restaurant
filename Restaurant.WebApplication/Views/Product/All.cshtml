@@ -3,6 +3,14 @@
 @{
     ViewData["Title"] = "All";
 }
+<div class="row">
+    <div class="col-sm-12">
+        <form method="get" id="search-form-product" action="/Product/All">
+            <input type="text" placeholder="Name" name="q" id="q" />
+            <input type="hidden" value="1" name="page" id="page" />
+        </form>
+    </div>
+</div>
 <table class="table">
     <thead>
         <tr>
@@ -23,3 +31,19 @@
         }
     </tbody>
 </table>
+<div class="blog-pagination">
+    <ul>
+        @for (int item = 1; item <= Model.PageCount; item++)
+        {
+            <li>
+                <button class="no-round-btn smooth active" onclick="search(@item)">@item</button>
+            </li>
+        }
+    </ul>
+</div>
+<script>
+    function search(page) {
+        $('#page').val(page);
+        $('#search-form-product').submit();
+    }
+</script>

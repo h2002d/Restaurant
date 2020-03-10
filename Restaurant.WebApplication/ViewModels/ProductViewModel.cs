@@ -18,10 +18,9 @@ namespace Restaurant.WebApplication.ViewModels
         public bool IsDeleted { get; set; }
         public string Keys { get; set; }
         public int CategoryId { get; set; }
-
+        public string ProductDays { get; set; }
         public SelectList ParentCategory { get; set; }
         public List<ProductImages> ProductImages { get; set; }
-        public virtual ICollection<ProductDays> ProductDays { get; set; }
 
     }
 }

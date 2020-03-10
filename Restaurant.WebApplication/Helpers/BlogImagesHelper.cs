@@ -40,13 +40,14 @@ namespace Restaurant.WebApplication.Helpers
                 if (file.Length > 0)
                 {
                     //item.CopyTo(fileStream);
-                    var filePath = Path.Combine(uploads, file.FileName);
+                    var timeSpan = DateTime.Now.ToString("yyyyMMddHHmmssffff");
+                    var filePath = Path.Combine(uploads, file.FileName + timeSpan);
                     using (var fileStream = new FileStream(filePath, FileMode.Create))
                     {
                         file.CopyTo(fileStream);
                     }
                     BlogImages blog = new BlogImages();
-                    blog.ImagePath = $"/images/blogs/{blogId}/{file.FileName}";
+                    blog.ImagePath = $"/images/blogs/{blogId}/{file.FileName + timeSpan}";
                     blog.BlogId = blogId;
                     blog.UploadDate = DateTime.Now;
                     imageRepository.Create(blog);

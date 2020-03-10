@@ -5,24 +5,26 @@
 }
 
 <div class="row">
-    <div class="col-md-4">
+    <div class="col-md-12">
         <form asp-action="Create" method="post" enctype="multipart/form-data">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input asp-for="Id" class="form-control" type="hidden" />
-            <div class="form-group">
+            <div class="form-group col-md-4">
                 <label asp-for="Name" class="control-label"></label>
                 <input asp-for="Name" class="form-control" />
                 <span asp-validation-for="Name" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="Description" class="control-label"></label>
-                <input asp-for="Description" class="form-control" />
-                <span asp-validation-for="Description" class="text-danger"></span>
-            </div>
-            <div class="form-group">
+
+            <div class="form-group col-md-4">
                 <label asp-for="Price" class="control-label"></label>
                 <input asp-for="Price" class="form-control" />
                 <span asp-validation-for="Price" class="text-danger"></span>
+            </div>
+            <div class="form-group col-md-12">
+                <label asp-for="Description" class="control-label"></label>
+                <textarea asp-for="Description" style="margin-top: 30px;" placeholder="Type some text">
+                </textarea>
+                <span asp-validation-for="Description" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label for="ParentCategoryId" class="control-label"></label>
@@ -32,18 +34,39 @@
                 <span asp-validation-for="CategoryId" class="text-danger"></span>
             </div>
             <div class="form-group" id="category-container">
-                
+
+            </div>
+            <div class="form-group">
+                <input type="hidden" asp-for="ProductDays" />
+                <input type="checkbox" class="Days" value="Monday" @(Model != null ? Model.ProductDays.Contains("Monday") ? "checked" : "" : "")>
+                <label>Monday</label><br>
+                <input type="checkbox" class="Days" value="Tuesday" @(Model != null ? Model.ProductDays.Contains("Tuesday") ? "checked" : "" : "")>
+                <label>Tuesday</label><br>
+                <input type="checkbox" class="Days" value="Wednesday" @(Model != null ? Model.ProductDays.Contains("Wednesday") ? "checked" : "" : "")>
+                <label>Wednesday</label><br>
+                <input type="checkbox" class="Days" value="Thursday" @(Model != null ? Model.ProductDays.Contains("Thursday") ? "checked" : "" : "")>
+                <label>Thursday</label><br>
+                <input type="checkbox" class="Days" value="Friday" @(Model != null ? Model.ProductDays.Contains("Friday") ? "checked" : "" : "")>
+                <label>Friday</label><br>
+                <input type="checkbox" class="Days" value="Saturday" @(Model != null ? Model.ProductDays.Contains("Saturday") ? "checked" : "" : "")>
+                <label>Saturday</label><br>
+                <input type="checkbox" class="Days" value="Sunday" @(Model != null ? Model.ProductDays.Contains("Sunday") ? "checked" : "" : "")>
+                <label>Sunday</label><br>
             </div>
             <div class="form-group">
                 <ul>
                     @if (Model != null)
                     {
-                    @foreach (var image in Model.ProductImages)
+                        @foreach (var image in Model.ProductImages)
                         {
-                    <li>
-                        <img src="@image.ImagePath" style="width:250px;height:250px;" />
-                        <td><a href="/Blog/DeleteImage?Id=@image.Id"><span class="glyphicon glyphicon-trash" style="color:red" title="Delete"></span></a></td>
-                    </li>
+                            <li>
+                                <img src="@image.ImagePath" style="width:250px;height:250px;" />
+                                <td>
+                                    <a href="/Blog/DeleteImage?Id=@image.Id">
+                                        <span class="glyphicon glyphicon-trash" style="color:red" title="Delete"></span>
+                                    </a>
+                                </td>
+                            </li>
                         }
                     }
                     <li>
@@ -63,7 +86,24 @@
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
     <script>
         $(document).on('change', '#ParentCategoryId', function () {
-            $('#category-container').load('/Category/_SubCategoryPartial?parentCategoryId='+$(this).val());
+            $('#category-container').load('/Category/_SubCategoryPartial?parentCategoryId=' + $(this).val());
         })
+
+        $(document).on('change', '.Days', function () {
+            var checked = $(this).is(":checked");
+            var days = $('#ProductDays').val();
+            if (checked) {
+                $('#ProductDays').val(days + $(this).val());
+            }
+            else {
+                days = days.replace($(this).val(), '')
+                $('#ProductDays').val(days);
+            }
+            console.log($('#ProductDays').val());
+
+        });
+        $(document).ready(function () {
+            $('#Description').summernote();
+        });
     </script>
 }

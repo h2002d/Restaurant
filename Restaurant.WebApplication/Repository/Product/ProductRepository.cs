@@ -52,8 +52,16 @@ namespace Restaurant.WebApplication.Repository
         public List<Product> GetProductForAll(int page, int categoryId, string name)
         {
 
-            var products = _applicationDbContext.Products.Where(x => categoryId == 0 ? true : x.CategoryId == categoryId && String.IsNullOrEmpty(name) ? true : x.Name.Contains(name)).ToList();
-            return products;
+            var products = _applicationDbContext.Products.Where(x => categoryId == 0 ? true : x.CategoryId == categoryId);
+            products=products.Where(x => String.IsNullOrEmpty(name) ? true : x.Name.Contains(name)).Skip((page - 1) * 10).Take(10);
+            return products.ToList();
+        }
+
+        public int GetProductForAllCount(int categoryId, string name)
+        {
+
+            var count = _applicationDbContext.Products.Where(x => categoryId == 0 ? true : x.CategoryId == categoryId && String.IsNullOrEmpty(name) ? true : x.Name.Contains(name)).Count();
+            return count;
         }
 
         public List<Product> GetProducts()

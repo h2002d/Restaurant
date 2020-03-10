@@ -37,11 +37,9 @@ namespace Restaurant.WebApplication.Controllers
             _mapper = mapper;
         }
 
-        public IActionResult All()
+        public IActionResult All(int page = 1)
         {
-            var blogs = _blogService.GetBlogs(0);
-            var model = new BlogMainViewModel();
-            model.Blogs = blogs;
+            var model = _blogService.GetBlogMainViewModel(page);
             return View(model);
         }
 

@@ -14,6 +14,12 @@
             <div class="col-12">
                 <div class="blog-grid">
                     <div class="row">
+                        @if (Model.Careers.Count == 0)
+                        {
+                            <div class="col-md-12">
+                                <h5>Свободных вакансий нету</h5>
+                            </div>
+                        }
                         @foreach (var item in Model.Careers)
                         {
                             <div class="col-md-12">
@@ -31,21 +37,21 @@
                     </div>
                 </div>
                 @*<div class="blog-pagination">
-                    <ul>
-                        <li>
-                            <button class="no-round-btn smooth active">1</button>
-                        </li>
-                        <li>
-                            <button class="no-round-btn smooth">2</button>
-                        </li>
-                        <li>
-                            <button class="no-round-btn smooth">3</button>
-                        </li>
-                        <li>
-                            <button class="no-round-btn smooth"> <i class="arrow_carrot-2right"></i></button>
-                        </li>
-                    </ul>
-                </div>*@
+                        <ul>
+                            <li>
+                                <button class="no-round-btn smooth active">1</button>
+                            </li>
+                            <li>
+                                <button class="no-round-btn smooth">2</button>
+                            </li>
+                            <li>
+                                <button class="no-round-btn smooth">3</button>
+                            </li>
+                            <li>
+                                <button class="no-round-btn smooth"> <i class="arrow_carrot-2right"></i></button>
+                            </li>
+                        </ul>
+                    </div>*@
             </div>
         </div>
     </div>

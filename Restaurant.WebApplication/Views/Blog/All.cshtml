@@ -21,3 +21,13 @@
     }
 </table>
 @*admin role section end*@
+<div class="blog-pagination">
+    <ul>
+        @for (int item = 1; item <= Model.PageCount; item++)
+        {
+            <li style="float: left;">
+                <button class="no-round-btn smooth active" onclick="location.href = '/Blog/All?page=@item';">@item</button>
+            </li>
+        }
+    </ul>
+</div>

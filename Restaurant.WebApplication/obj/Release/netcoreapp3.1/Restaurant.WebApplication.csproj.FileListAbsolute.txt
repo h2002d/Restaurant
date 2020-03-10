@@ -463,3 +463,5 @@ C:\Projects\Restaurant\Restaurant.WebApplication\obj\Release\netcoreapp3.1\Resta
 C:\Projects\Restaurant\Restaurant.WebApplication\obj\Release\netcoreapp3.1\Restaurant.WebApplication.dll
 C:\Projects\Restaurant\Restaurant.WebApplication\obj\Release\netcoreapp3.1\Restaurant.WebApplication.pdb
 C:\Projects\Restaurant\Restaurant.WebApplication\obj\Release\netcoreapp3.1\Restaurant.WebApplication.csprojAssemblyReference.cache
+C:\Projects\Restaurant\Restaurant.WebApplication\obj\Release\netcoreapp3.1\Razor\Views\Product\All.cshtml.g.cs
+C:\Projects\Restaurant\Restaurant.WebApplication\obj\Release\netcoreapp3.1\Razor\Views\Product\Index.cshtml.g.cs

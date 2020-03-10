@@ -15,6 +15,8 @@ namespace Restaurant.WebApplication.Models
         public string Email { get; set; }
         public string FacebookLink { get; set; }
         public string InstagramLink { get; set; }
+        public string VkLink { get; set; }
+        public string PinterestLink { get; set; }
         public string Address { get; set; }
 
     }

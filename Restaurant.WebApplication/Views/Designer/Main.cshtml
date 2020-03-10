@@ -14,23 +14,23 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="AboutUsContent" class="control-label"></label>
-                <input asp-for="AboutUsContent" class="form-control" />
+                <textarea asp-for="AboutUsContent" class="form-control"></textarea>
                 <input type="hidden" asp-for="Id" class="form-control" />
                 <span asp-validation-for="AboutUsContent" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="ContactUsContent" class="control-label"></label>
-                <input asp-for="ContactUsContent" class="form-control" />
+                <textarea asp-for="ContactUsContent" class="form-control" ></textarea>
                 <span asp-validation-for="ContactUsContent" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="OurMission" class="control-label"></label>
-                <input asp-for="OurMission" class="form-control" />
+                <textarea asp-for="OurMission" class="form-control"></textarea>
                 <span asp-validation-for="OurMission" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="PhoneNumber" class="control-label"></label>
-                <input asp-for="PhoneNumber" class="form-control" />
+                <textarea asp-for="PhoneNumber" class="form-control"></textarea>
                 <span asp-validation-for="PhoneNumber" class="text-danger"></span>
             </div>
             <div class="form-group">
@@ -52,6 +52,16 @@
                 <label asp-for="InstagramLink" class="control-label"></label>
                 <input asp-for="InstagramLink" class="form-control" />
                 <span asp-validation-for="InstagramLink" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="VkLink" class="control-label"></label>
+                <input asp-for="VkLink" class="form-control" />
+                <span asp-validation-for="VkLink" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PinterestLink" class="control-label"></label>
+                <input asp-for="PinterestLink" class="form-control" />
+                <span asp-validation-for="PinterestLink" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-default" />
